@@ -16,8 +16,8 @@ class Config:
     n_pairs_per_molecule: int = 20          # 50 molecules × 20 = 1000 pairs
 
     # ----- Tokenizer (joint) -----
-    joint_vocab_size: int = 4096            # Production: 16384. PoC: 4096 (runs in seconds)
-    num_bridges: int = 0                    # Experiment 2: no bridges (isolate bridge contribution)
+    joint_vocab_size: int = 2048            # Experiment 3: half the baseline vocab (was 4096)
+    num_bridges: int = 64                   # restored to baseline for experiment 3
     bridge_min_len: int = 4                 # Minimum SMILES length to be a bridge candidate
     bridge_max_len: int = 12                # Maximum SMILES length
     bridge_min_freq: int = 3                # Must appear at least N times in corpus
