@@ -32,7 +32,7 @@ from joint_tokenizer import (
 )
 
 # SMILES base alphabet — always included in vocab regardless of corpus
-SMILES_BASE_ALPHABET = list("0123456789BCFHIKNOPSclnops().[]=#@+-/\\:")
+SMILES_BASE_ALPHABET = list("0123456789BCFHIKNOPSclnopsr().[]=#@+-/\\:")
 
 
 # ============================================================ Char-level

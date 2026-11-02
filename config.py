@@ -17,7 +17,7 @@ class Config:
 
     # ----- Tokenizer (joint) -----
     joint_vocab_size: int = 4096            # Production: 16384. PoC: 4096 (runs in seconds)
-    num_bridges: int = 64                   # Production: 256. PoC: 64 (smaller corpus)
+    num_bridges: int = 128                  # Production: 256. PoC: 128 (experiment)
     bridge_min_len: int = 4                 # Minimum SMILES length to be a bridge candidate
     bridge_max_len: int = 12                # Maximum SMILES length
     bridge_min_freq: int = 3                # Must appear at least N times in corpus

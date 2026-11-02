@@ -278,7 +278,7 @@ class JointTokenizer:
         # ring-closure digits still encode losslessly.
         SMILES_BASE_ALPHABET = list(
             "0123456789"
-            "BCFHIKNOPSclnops"
+            "BCFHIKNOPSclnopsr"
             "().[]=#@+-/\\:)"
         )
         base_tokens = set(SMILES_BASE_ALPHABET)
