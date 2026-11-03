@@ -1,4 +1,5 @@
-# Methodology package — joint tokenizer PoC
+# Methodology package - joint tokenizer + lightweight decoder PoC
 # Tested with Python 3.10+
 
-rdkit>=2023.03.1      # SMILES validation (optional but recommended)
+torch>=2.0            # Transformer decoder (CPU build works fine)
+rdkit>=2023.03.1      # SMILES validation + 2D structure rendering
