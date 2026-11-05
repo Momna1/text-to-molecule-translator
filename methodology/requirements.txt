@@ -1,4 +1,0 @@
-# Methodology package — joint tokenizer PoC
-# Tested with Python 3.10+
-
-rdkit>=2023.03.1      # SMILES validation (optional but recommended)

@@ -3,3 +3,4 @@
 
 torch>=2.0            # Transformer decoder (CPU build works fine)
 rdkit>=2023.03.1      # SMILES validation + 2D structure rendering
+streamlit>=1.30       # Web GUI for the text-to-molecule demo
