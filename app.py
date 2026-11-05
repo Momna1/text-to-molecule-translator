@@ -1,10 +1,13 @@
 """
 Streamlit GUI for the text-to-molecule pipeline.
 
-Run with:
+Run locally with:
     streamlit run app.py
 
-A browser tab will open at http://localhost:8501 with:
+Deployed on Streamlit Cloud:
+    https://text-to-molecule-translator.streamlit.app
+
+A browser tab will open with:
 - A text input for your natural-language prompt
 - A "Generate Molecule" button
 - The generated SMILES + validity check
@@ -52,11 +55,20 @@ st.set_page_config(
 
 # ============================================================ cached model loader
 @st.cache_resource(show_spinner=False)
-def load_generator() -> MoleculeGenerator:
-    """Load the trained model + tokenizer. Cached so it only loads once."""
-    ckpt_dir = "ckpt"
-    if not (os.path.exists(os.path.join(ckpt_dir, "tokenizer.json"))
-            and os.path.exists(os.path.join(ckpt_dir, "model.pt"))):
+def load_generator() -> Optional[MoleculeGenerator]:
+    """Load the trained model + tokenizer. Cached so it only loads once.
+
+    Uses an absolute path based on the script location so it works both
+    locally and in the Streamlit Cloud environment (where the working
+    directory may differ from the script's directory).
+    """
+    # Absolute path to the directory containing this script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    ckpt_dir = os.path.join(script_dir, "ckpt")
+
+    tokenizer_path = os.path.join(ckpt_dir, "tokenizer.json")
+    model_path = os.path.join(ckpt_dir, "model.pt")
+    if not (os.path.exists(tokenizer_path) and os.path.exists(model_path)):
         return None
     try:
         return MoleculeGenerator.from_checkpoint(ckpt_dir, use_int8=True)
@@ -221,8 +233,11 @@ if "last_result" in st.session_state:
                     img = Draw.MolToImage(mol, size=(400, 400))
                     st.image(img, caption=result.canonical_smiles, use_container_width=True)
 
-                    os.makedirs("results", exist_ok=True)
-                    img.save("results/generated_molecule.png")
+                    # Save to file (use absolute path for cloud compatibility)
+                    script_dir = os.path.dirname(os.path.abspath(__file__))
+                    results_dir = os.path.join(script_dir, "results")
+                    os.makedirs(results_dir, exist_ok=True)
+                    img.save(os.path.join(results_dir, "generated_molecule.png"))
             except Exception as e:
                 st.warning(f"Could not render 2D structure: {e}")
 
