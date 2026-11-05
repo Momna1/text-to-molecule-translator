@@ -1,0 +1,4471 @@
+{
+  "vocab_size": 2048,
+  "num_bridges": 64,
+  "bridge_min_len": 4,
+  "bridge_max_len": 12,
+  "bridge_min_freq": 3,
+  "js_threshold": 0.15,
+  "js_min_cooccurrence": 2,
+  "bridges": [
+    "cccc",
+    "c1cc",
+    "1ccc",
+    "(=O)",
+    "ccc1",
+    "C(=O",
+    "[nH]c",
+    "O)c1c",
+    "=O)c",
+    "Oc1c",
+    "=O)N",
+    "Nc1c",
+    "c2[nH]",
+    "ccc(",
+    "ccc2",
+    "nH]c(=O",
+    "(O)c",
+    "O)cc",
+    ")cc1",
+    "NC(=",
+    "Cc1c",
+    "nH]cnc",
+    "O=[N+]([O-])",
+    "=[N+]([O-])c",
+    "[N+]([O-])c1",
+    "N+]([O-])c1c",
+    "1cc[nH]",
+    "CC(=",
+    "=O)O",
+    "OC(=",
+    "c2cc",
+    "cc(O)",
+    "cc(C(C)C(=",
+    "c1[nH]",
+    "O=C(O)",
+    "cc1O",
+    "COc1",
+    "cc2c",
+    "O)Nc1",
+    "O)c2[nH",
+    "cnc2[nH",
+    "1ccncc1",
+    "cc1C",
+    "1C(=",
+    "cnc1",
+    "COC(",
+    "O=c1",
+    "2ccc",
+    "H]cnc2",
+    "CN1C=NC2=C1C",
+    "N1C=NC2=C1C(",
+    "1cc(CO)ncc1",
+    "=O)/C=C/c1c",
+    "[nH]1",
+    "=O)Cc",
+    "O)O)c",
+    "2cc(C(C)C(",
+    "Nc1ncnc2[n",
+    "=C(O)CNc1",
+    "c1C(",
+    "N)cc",
+    "=c1c",
+    "O)N1",
+    "=Cc1"
+  ],
+  "token2id": {
+    "<pad>": 0,
+    "<bos>": 1,
+    "<eos>": 2,
+    "<unk>": 3,
+    "<nl>": 4,
+    "cccc": 5,
+    "c1cc": 6,
+    "1ccc": 7,
+    "(=O)": 8,
+    "ccc1": 9,
+    "C(=O": 10,
+    "[nH]c": 11,
+    "O)c1c": 12,
+    "=O)c": 13,
+    "Oc1c": 14,
+    "=O)N": 15,
+    "Nc1c": 16,
+    "c2[nH]": 17,
+    "ccc(": 18,
+    "ccc2": 19,
+    "nH]c(=O": 20,
+    "(O)c": 21,
+    "O)cc": 22,
+    ")cc1": 23,
+    "NC(=": 24,
+    "Cc1c": 25,
+    "nH]cnc": 26,
+    "O=[N+]([O-])": 27,
+    "=[N+]([O-])c": 28,
+    "[N+]([O-])c1": 29,
+    "N+]([O-])c1c": 30,
+    "1cc[nH]": 31,
+    "CC(=": 32,
+    "=O)O": 33,
+    "OC(=": 34,
+    "c2cc": 35,
+    "cc(O)": 36,
+    "cc(C(C)C(=": 37,
+    "c1[nH]": 38,
+    "O=C(O)": 39,
+    "cc1O": 40,
+    "COc1": 41,
+    "cc2c": 42,
+    "O)Nc1": 43,
+    "O)c2[nH": 44,
+    "cnc2[nH": 45,
+    "1ccncc1": 46,
+    "cc1C": 47,
+    "1C(=": 48,
+    "cnc1": 49,
+    "COC(": 50,
+    "O=c1": 51,
+    "2ccc": 52,
+    "H]cnc2": 53,
+    "CN1C=NC2=C1C": 54,
+    "N1C=NC2=C1C(": 55,
+    "1cc(CO)ncc1": 56,
+    "=O)/C=C/c1c": 57,
+    "[nH]1": 58,
+    "=O)Cc": 59,
+    "O)O)c": 60,
+    "2cc(C(C)C(": 61,
+    "Nc1ncnc2[n": 62,
+    "=C(O)CNc1": 63,
+    "c1C(": 64,
+    "N)cc": 65,
+    "=c1c": 66,
+    "O)N1": 67,
+    "=Cc1": 68,
+    "#": 69,
+    "(": 70,
+    ")": 71,
+    "+": 72,
+    ",▁": 73,
+    "-": 74,
+    ".": 75,
+    "/": 76,
+    "0": 77,
+    "1": 78,
+    "2": 79,
+    "3": 80,
+    "4": 81,
+    "5": 82,
+    "6": 83,
+    "7": 84,
+    "8": 85,
+    "9": 86,
+    ":": 87,
+    "=": 88,
+    "@": 89,
+    "B": 90,
+    "C": 91,
+    "F": 92,
+    "H": 93,
+    "I": 94,
+    "K": 95,
+    "N": 96,
+    "O": 97,
+    "P": 98,
+    "S": 99,
+    "[": 100,
+    "\\": 101,
+    "]": 102,
+    "acetaminophen▁": 103,
+    "acetanilide▁": 104,
+    "acetophenone▁": 105,
+    "acid▁": 106,
+    "acne▁": 107,
+    "adenine▁": 108,
+    "agent▁": 109,
+    "alcohol▁": 110,
+    "alertness▁": 111,
+    "analgesic▁": 112,
+    "aniline▁": 113,
+    "anisol▁": 114,
+    "anthranilic▁": 115,
+    "antibiotic▁": 116,
+    "antifungal▁": 117,
+    "antiseptic▁": 118,
+    "an▁": 119,
+    "aromatic▁": 120,
+    "aspartame▁": 121,
+    "aspirin▁": 122,
+    "as▁": 123,
+    "a▁": 124,
+    "barbituric▁": 125,
+    "benzaldehyde▁": 126,
+    "benzamide▁": 127,
+    "benzene▁": 128,
+    "benzoate▁": 129,
+    "benzoic▁": 130,
+    "benzyl▁": 131,
+    "biochemistry▁": 132,
+    "bromobenzene▁": 133,
+    "build▁": 134,
+    "c": 135,
+    "caffeine▁": 136,
+    "catechol▁": 137,
+    "chemical▁": 138,
+    "chlorobenzene▁": 139,
+    "cinnamic▁": 140,
+    "compound▁": 141,
+    "construct▁": 142,
+    "containing▁": 143,
+    "coumarin▁": 144,
+    "create▁": 145,
+    "cytosine▁": 146,
+    "design▁": 147,
+    "disinfectant▁": 148,
+    "draw▁": 149,
+    "ethyl▁": 150,
+    "flavorant▁": 151,
+    "food▁": 152,
+    "for▁": 153,
+    "fragrance▁": 154,
+    "furan▁": 155,
+    "generate▁": 156,
+    "give▁": 157,
+    "guanine▁": 158,
+    "hippuric▁": 159,
+    "hydroquinone▁": 160,
+    "ibuprofen▁": 161,
+    "imidazole▁": 162,
+    "indole▁": 163,
+    "industry▁": 164,
+    "infection▁": 165,
+    "inflammation▁": 166,
+    "intermediate▁": 167,
+    "in▁": 168,
+    "isoniazid▁": 169,
+    "isonicotinamide▁": 170,
+    "i▁": 171,
+    "l": 172,
+    "liniment▁": 173,
+    "make▁": 174,
+    "methyl▁": 175,
+    "metronidazole▁": 176,
+    "me▁": 177,
+    "molecule▁": 178,
+    "monomer▁": 179,
+    "n": 180,
+    "naproxen▁": 181,
+    "need▁": 182,
+    "nicotinic▁": 183,
+    "nitrobenzene▁": 184,
+    "nsaid▁": 185,
+    "nucleobase▁": 186,
+    "nutrition▁": 187,
+    "o": 188,
+    "of▁": 189,
+    "p": 190,
+    "pain▁": 191,
+    "paracetamol▁": 192,
+    "perfumery▁": 193,
+    "phenetole▁": 194,
+    "phenol▁": 195,
+    "polymer▁": 196,
+    "precursor▁": 197,
+    "preservative▁": 198,
+    "produce▁": 199,
+    "pyridine▁": 200,
+    "pyrrole▁": 201,
+    "r": 202,
+    "relief▁": 203,
+    "resorcinol▁": 204,
+    "ring▁": 205,
+    "s": 206,
+    "saccharin▁": 207,
+    "salicylate▁": 208,
+    "salicylic▁": 209,
+    "solvent▁": 210,
+    "specifically▁": 211,
+    "stimulant▁": 212,
+    "structure▁": 213,
+    "styrene▁": 214,
+    "sulfanilamide▁": 215,
+    "sweetener▁": 216,
+    "synthesis▁": 217,
+    "synthesize▁": 218,
+    "targeting▁": 219,
+    "the▁": 220,
+    "thiophene▁": 221,
+    "toluene▁": 222,
+    "treatment▁": 223,
+    "tuberculosis▁": 224,
+    "uracil▁": 225,
+    "used▁": 226,
+    "vanillin▁": 227,
+    "vitamin▁": 228,
+    "with▁": 229,
+    "xanthine▁": 230,
+    "—▁": 231,
+    "c1": 232,
+    "chemical▁synthesis▁": 233,
+    ",▁a▁": 234,
+    "for▁chemical▁synthesis▁": 235,
+    "cccc1": 236,
+    "O)": 237,
+    "c1ccccc1": 238,
+    ",▁used▁": 239,
+    "used▁in▁": 240,
+    "—▁a▁": 241,
+    ",▁an▁": 242,
+    ",▁an▁aromatic▁": 243,
+    "ccccc1": 244,
+    "cc1": 245,
+    "(C": 246,
+    "cc": 247,
+    ",▁a▁intermediate▁": 248,
+    "the▁intermediate▁": 249,
+    "CC(=O)Nc1": 250,
+    "[nH]c(=O)": 251,
+    "NC(=O)c1c": 252,
+    "C(=O)": 253,
+    ",▁a▁compound▁": 254,
+    ",▁used▁as▁": 255,
+    "i▁need▁": 256,
+    "give▁me▁": 257,
+    "containing▁a▁": 258,
+    "containing▁a▁benzene▁": 259,
+    "containing▁a▁benzene▁ring▁": 260,
+    "generate▁a▁": 261,
+    "with▁the▁": 262,
+    "with▁the▁structure▁": 263,
+    "with▁the▁structure▁of▁": 264,
+    ",▁an▁aromatic▁compound▁": 265,
+    "the▁molecule▁": 266,
+    "create▁a▁": 267,
+    ",▁specifically▁": 268,
+    "used▁in▁chemical▁synthesis▁": 269,
+    "pain▁relief▁": 270,
+    "for▁biochemistry▁": 271,
+    "—▁a▁intermediate▁": 272,
+    "Oc1ccccc1": 273,
+    "CC(=O)Nc1ccc(": 274,
+    "CC(=O)Nc1ccc(O)cc": 275,
+    "CC(=O)Nc1ccc(O)cc1": 276,
+    "Nc1ccccc1": 277,
+    "cccc1C(=": 278,
+    "cccc1C(=O)": 279,
+    "cccc1C(=O)O": 280,
+    "COc1ccccc1": 281,
+    "COC(=O)c": 282,
+    "COC(=O)c1ccc": 283,
+    "cc(": 284,
+    "N)cc1": 285,
+    "c2": 286,
+    "ncc1": 287,
+    "Cc1ccccc1": 288,
+    "O=": 289,
+    "c2ccccc2": 290,
+    "C(=O)N": 291,
+    "=Cc1ccccc1": 292,
+    "NC(=O)": 293,
+    "n1": 294,
+    "O=C(O)c1ccccc1": 295,
+    "(C)": 296,
+    "intermediate▁for▁chemical▁synthesis▁": 297,
+    "food▁industry▁": 298,
+    "produce▁the▁": 299,
+    "synthesize▁the▁": 300,
+    "for▁pain▁relief▁": 301,
+    ",▁a▁compound▁for▁chemical▁synthesis▁": 302,
+    ",▁used▁as▁chemical▁synthesis▁": 303,
+    ",▁used▁as▁chemical▁synthesis▁agent▁": 304,
+    "targeting▁chemical▁synthesis▁": 305,
+    ",▁used▁for▁chemical▁synthesis▁": 306,
+    "for▁food▁industry▁": 307,
+    "anthranilic▁acid▁": 308,
+    "ethyl▁benzoate▁": 309,
+    "nicotinic▁acid▁": 310,
+    "synthesize▁the▁intermediate▁": 311,
+    "generate▁a▁intermediate▁": 312,
+    "generate▁a▁intermediate▁with▁the▁structure▁of▁": 313,
+    ",▁an▁aromatic▁intermediate▁": 314,
+    "benzyl▁alcohol▁": 315,
+    "cinnamic▁acid▁": 316,
+    "barbituric▁acid▁": 317,
+    "salicylic▁acid▁": 318,
+    "benzoic▁acid▁": 319,
+    "hippuric▁acid▁": 320,
+    ",▁a▁intermediate▁containing▁a▁benzene▁ring▁": 321,
+    "methyl▁salicylate▁": 322,
+    "produce▁the▁intermediate▁": 323,
+    "Oc1ccccc1O": 324,
+    "Nc1ccccc1C(=O)O": 325,
+    "c1[nH]cnc1": 326,
+    "CCOC(=O)c1ccc": 327,
+    "CCOC(=O)c1ccccc1": 328,
+    "Nc1ccc(": 329,
+    "Nc1ccc(S": 330,
+    "Nc1ccc(S(=O)": 331,
+    "Nc1ccc(S(=O)(=O)": 332,
+    "Nc1ccc(S(=O)(=O)N)cc1": 333,
+    "OC(=O)c1c": 334,
+    "OC(=O)c1cc": 335,
+    "OC(=O)c1cccnc1": 336,
+    "O=c1ccc2": 337,
+    "O=c1ccc2cccc": 338,
+    "O=c1ccc2ccccc2": 339,
+    "O=c1ccc2ccccc2o": 340,
+    "O=c1ccc2ccccc2o1": 341,
+    "O=[N+]([O-])c1ccccc1": 342,
+    "O=c1[nH]c(=O)": 343,
+    "O=c1[nH]c(=O)c2[nH]": 344,
+    "O=c1[nH]c(=O)c2[nH]cnc2[nH": 345,
+    "O=c1[nH]c(=O)c2[nH]cnc2[nH]": 346,
+    "O=c1[nH]c(=O)c2[nH]cnc2[nH]1": 347,
+    "c1ccncc1": 348,
+    "CC(=O)c1c": 349,
+    "CC(=O)c1ccccc1": 350,
+    "c1cc[nH]c": 351,
+    "c1cc[nH]c1": 352,
+    "O=c1cc": 353,
+    "O=c1cc[nH]c(=O)": 354,
+    "O=c1cc[nH]c(=O)[nH]1": 355,
+    "NC(=O)c1ccccc1": 356,
+    "OCc1ccccc1": 357,
+    "Cl": 358,
+    "Clc1ccccc1": 359,
+    "Oc1ccc(O)": 360,
+    "Oc1ccc(O)cc1": 361,
+    "O=[N+]([O-])c1cc": 362,
+    "O=[N+]([O-])c1cc(C": 363,
+    "O=[N+]([O-])c1cc(CO)": 364,
+    "O=[N+]([O-])c1cc(CO)n": 365,
+    "O=[N+]([O-])c1cc(CO)ncc1C": 366,
+    "O=[N+]([O-])c1cc(CO)ncc1Cl": 367,
+    "NC(=O)c1cc": 368,
+    "NC(=O)c1ccncc1": 369,
+    "c1cco": 370,
+    "c1ccoc1": 371,
+    "c1ccc2[nH]": 372,
+    "c1ccc2[nH]ccc2": 373,
+    "c1ccc2[nH]ccc2c1": 374,
+    "O=S": 375,
+    "O=S1": 376,
+    "O=S1(=O)": 377,
+    "O=S1(=O)c2ccccc2": 378,
+    "O=S1(=O)c2ccccc2C(=O)N": 379,
+    "O=S1(=O)c2ccccc2C(=O)N1": 380,
+    "O=Cc1ccccc1": 381,
+    "NC(=O)c1ccc(": 382,
+    "NC(=O)c1ccc(N)cc1": 383,
+    "OC(=O)": 384,
+    "OC(=O)/": 385,
+    "OC(=O)/C": 386,
+    "OC(=O)/C=": 387,
+    "OC(=O)/C=C": 388,
+    "OC(=O)/C=C/": 389,
+    "OC(=O)/C=C/c1ccccc1": 390,
+    "CN1C=NC2=C1C(=O)": 391,
+    "CN1C=NC2=C1C(=O)N": 392,
+    "CN1C=NC2=C1C(=O)N(": 393,
+    "CN1C=NC2=C1C(=O)N(C(=O)N": 394,
+    "CN1C=NC2=C1C(=O)N(C(=O)N2": 395,
+    "CN1C=NC2=C1C(=O)N(C(=O)N2C": 396,
+    "CN1C=NC2=C1C(=O)N(C(=O)N2C)": 397,
+    "CN1C=NC2=C1C(=O)N(C(=O)N2C)C": 398,
+    "COC(=O)Cc": 399,
+    "COC(=O)Cc1ccc": 400,
+    "COC(=O)Cc1ccccc1": 401,
+    "COC(=O)Cc1ccccc1NC(=O)": 402,
+    "COC(=O)Cc1ccccc1NC(=O)C": 403,
+    "COC(=O)Cc1ccccc1NC(=O)Cc2ccccc2": 404,
+    "COC(=O)Cc1ccccc1NC(=O)Cc2ccccc2N": 405,
+    "Br": 406,
+    "Brc1ccccc1": 407,
+    "Nc1[nH]": 408,
+    "Nc1[nH]c": 409,
+    "Nc1[nH]c(=O)": 410,
+    "Nc1[nH]c(=O)c2[nH]": 411,
+    "Nc1[nH]c(=O)c2[nH]c": 412,
+    "Nc1[nH]c(=O)c2[nH]cn": 413,
+    "Nc1[nH]c(=O)c2[nH]cnc2": 414,
+    "Nc1[nH]c(=O)c2[nH]cnc2n1": 415,
+    "O=C": 416,
+    "O=C1": 417,
+    "O=C1NC(=O)": 418,
+    "O=C1NC(=O)NC(=": 419,
+    "O=C1NC(=O)NC(=O)N1": 420,
+    "O=C(O)c1ccccc1O": 421,
+    "CCOc1ccccc1": 422,
+    "CC": 423,
+    "CC(C)": 424,
+    "CC(C)Cc1c": 425,
+    "CC(C)Cc1ccc(C(C)C(=": 426,
+    "CC(C)Cc1ccc(C(C)C(=O)O)c": 427,
+    "CC(C)Cc1ccc(C(C)C(=O)O)cc1": 428,
+    "O=C(O)C": 429,
+    "O=C(O)CNc1ccccc1": 430,
+    "c1ccs": 431,
+    "c1ccsc1": 432,
+    "COc1cc2c": 433,
+    "COc1cc2cc": 434,
+    "COc1cc2cc(C": 435,
+    "COc1cc2cc(C(C)": 436,
+    "COc1cc2cc(C(C)C(=O)": 437,
+    "COc1cc2cc(C(C)C(=O)O)cc": 438,
+    "COc1cc2cc(C(C)C(=O)O)ccc2cc": 439,
+    "COc1cc2cc(C(C)C(=O)O)ccc2cc1": 440,
+    "CC(=O)Nc1ccccc1": 441,
+    "COc1cc": 442,
+    "COc1cc(C": 443,
+    "COc1cc(C=O)c": 444,
+    "COc1cc(C=O)ccc1O": 445,
+    "Nc1ncnc2[nH": 446,
+    "Nc1ncnc2[nH]": 447,
+    "Nc1ncnc2[nH]cnc1": 448,
+    "Nc1ncnc2[nH]cnc12": 449,
+    "Nc1cc": 450,
+    "Nc1cc[nH]c(=O)": 451,
+    "Nc1cc[nH]c(=O)n1": 452,
+    "CC(=O)": 453,
+    "CC(=O)Oc1c": 454,
+    "CC(=O)Oc1ccccc1C(=O)O": 455,
+    "COC(=O)c1ccccc1O": 456,
+    "Oc1cccc(": 457,
+    "Oc1cccc(O)": 458,
+    "Oc1cccc(O)c1": 459,
+    "C=Cc1ccccc1": 460,
+    "—▁intermediate▁for▁chemical▁synthesis▁": 461,
+    ",▁a▁intermediate▁used▁in▁chemical▁synthesis▁": 462,
+    "—▁a▁intermediate▁used▁in▁chemical▁synthesis▁": 463,
+    "—▁a▁intermediate▁targeting▁chemical▁synthesis▁": 464,
+    "create▁a▁intermediate▁for▁chemical▁synthesis▁": 465,
+    "create▁a▁intermediate▁for▁chemical▁synthesis▁,▁specifically▁": 466,
+    ",▁a▁solvent▁": 467,
+    "for▁infection▁": 468,
+    "for▁antiseptic▁": 469,
+    "for▁inflammation▁": 470,
+    ",▁a▁nucleobase▁": 471,
+    "—▁a▁solvent▁": 472,
+    "used▁in▁biochemistry▁": 473,
+    "solvent▁for▁chemical▁synthesis▁": 474,
+    ",▁a▁nsaid▁": 475,
+    "acne▁treatment▁": 476,
+    "polymer▁synthesis▁": 477,
+    ",▁a▁antibiotic▁": 478,
+    "—▁a▁nsaid▁": 479,
+    "—▁a▁nucleobase▁": 480,
+    "used▁in▁pain▁relief▁": 481,
+    "nucleobase▁for▁biochemistry▁": 482,
+    "for▁tuberculosis▁": 483,
+    "for▁antifungal▁": 484,
+    "for▁nutrition▁": 485,
+    "for▁perfumery▁": 486,
+    "for▁alertness▁": 487,
+    "for▁acne▁treatment▁": 488,
+    "for▁polymer▁synthesis▁": 489,
+    ",▁a▁analgesic▁": 490,
+    "—▁a▁solvent▁targeting▁chemical▁synthesis▁": 491,
+    ",▁an▁aromatic▁solvent▁": 492,
+    ",▁a▁sweetener▁": 493,
+    ",▁a▁compound▁for▁biochemistry▁": 494,
+    "targeting▁biochemistry▁": 495,
+    "create▁a▁solvent▁for▁chemical▁synthesis▁": 496,
+    "create▁a▁solvent▁for▁chemical▁synthesis▁,▁specifically▁": 497,
+    ",▁used▁as▁biochemistry▁": 498,
+    ",▁used▁as▁biochemistry▁agent▁": 499,
+    "used▁in▁food▁industry▁": 500,
+    "synthesize▁the▁solvent▁": 501,
+    "generate▁a▁solvent▁": 502,
+    "generate▁a▁solvent▁with▁the▁structure▁of▁": 503,
+    "—▁a▁solvent▁used▁in▁chemical▁synthesis▁": 504,
+    "the▁solvent▁": 505,
+    ",▁a▁solvent▁containing▁a▁benzene▁ring▁": 506,
+    ",▁a▁preservative▁": 507,
+    ",▁a▁solvent▁used▁in▁chemical▁synthesis▁": 508,
+    ",▁used▁for▁biochemistry▁": 509,
+    "produce▁the▁solvent▁": 510,
+    "—▁solvent▁for▁chemical▁synthesis▁": 511,
+    "—▁a▁antibiotic▁": 512,
+    ",▁a▁compound▁for▁pain▁relief▁": 513,
+    "antibiotic▁for▁infection▁": 514,
+    "sweetener▁for▁food▁industry▁": 515,
+    ",▁a▁nucleobase▁used▁in▁biochemistry▁": 516,
+    "the▁nsaid▁": 517,
+    ",▁used▁as▁pain▁relief▁": 518,
+    ",▁used▁as▁pain▁relief▁agent▁": 519,
+    ",▁used▁for▁pain▁relief▁": 520,
+    "—▁a▁nucleobase▁targeting▁biochemistry▁": 521,
+    "produce▁the▁nsaid▁": 522,
+    "synthesize▁the▁nucleobase▁": 523,
+    "—▁a▁analgesic▁": 524,
+    "targeting▁pain▁relief▁": 525,
+    "generate▁a▁nucleobase▁": 526,
+    "generate▁a▁nucleobase▁with▁the▁structure▁of▁": 527,
+    "used▁in▁antiseptic▁": 528,
+    "—▁nucleobase▁for▁biochemistry▁": 529,
+    "—▁a▁preservative▁": 530,
+    "used▁in▁infection▁": 531,
+    "the▁nucleobase▁": 532,
+    ",▁a▁nucleobase▁containing▁a▁benzene▁ring▁": 533,
+    ",▁a▁nsaid▁containing▁a▁benzene▁ring▁": 534,
+    "analgesic▁for▁pain▁relief▁": 535,
+    "used▁in▁inflammation▁": 536,
+    "—▁a▁nucleobase▁used▁in▁biochemistry▁": 537,
+    "—▁a▁sweetener▁": 538,
+    ",▁an▁aromatic▁nsaid▁": 539,
+    "—▁nsaid▁": 540,
+    "create▁a▁nsaid▁": 541,
+    "create▁a▁nucleobase▁for▁biochemistry▁": 542,
+    "create▁a▁nucleobase▁for▁biochemistry▁,▁specifically▁": 543,
+    "generate▁a▁nsaid▁": 544,
+    "generate▁a▁nsaid▁with▁the▁structure▁of▁": 545,
+    ",▁an▁aromatic▁nucleobase▁": 546,
+    "produce▁the▁nucleobase▁": 547,
+    "synthesize▁the▁nsaid▁": 548,
+    "intermediate▁for▁biochemistry▁": 549,
+    "acetaminophen▁,▁a▁analgesic▁": 550,
+    "aniline▁for▁chemical▁synthesis▁": 551,
+    "nitrobenzene▁for▁chemical▁synthesis▁": 552,
+    "xanthine▁for▁biochemistry▁": 553,
+    "benzyl▁alcohol▁for▁antiseptic▁": 554,
+    "metronidazole▁,▁a▁antibiotic▁": 555,
+    "coumarin▁,▁a▁": 556,
+    "coumarin▁,▁a▁fragrance▁": 557,
+    "phenol▁,▁a▁": 558,
+    "phenol▁,▁a▁disinfectant▁": 559,
+    "cinnamic▁acid▁for▁chemical▁synthesis▁": 560,
+    "caffeine▁,▁a▁": 561,
+    "caffeine▁,▁a▁stimulant▁": 562,
+    "aspartame▁,▁a▁sweetener▁": 563,
+    "isoniazid▁,▁a▁antibiotic▁": 564,
+    "barbituric▁acid▁for▁chemical▁synthesis▁": 565,
+    "preservative▁benzoic▁acid▁": 566,
+    "ibuprofen▁for▁inflammation▁": 567,
+    "hydroquinone▁for▁chemical▁synthesis▁": 568,
+    "benzamide▁for▁chemical▁synthesis▁": 569,
+    "produce▁the▁antibiotic▁": 570,
+    "vanillin▁,▁a▁": 571,
+    "vanillin▁,▁a▁flavorant▁": 572,
+    "fragrance▁coumarin▁": 573,
+    "furan▁for▁chemical▁synthesis▁": 574,
+    "targeting▁food▁industry▁": 575,
+    "naproxen▁for▁inflammation▁": 576,
+    "saccharin▁,▁a▁sweetener▁": 577,
+    "thiophene▁for▁chemical▁synthesis▁": 578,
+    "adenine▁for▁biochemistry▁": 579,
+    "ethyl▁benzoate▁for▁chemical▁synthesis▁": 580,
+    ",▁an▁aromatic▁antibiotic▁": 581,
+    ",▁used▁for▁food▁industry▁": 582,
+    "sulfanilamide▁,▁a▁antibiotic▁": 583,
+    "liniment▁methyl▁salicylate▁": 584,
+    "caffeine▁for▁alertness▁": 585,
+    "benzaldehyde▁for▁chemical▁synthesis▁": 586,
+    "styrene▁,▁a▁": 587,
+    "styrene▁,▁a▁monomer▁": 588,
+    "phenetole▁for▁chemical▁synthesis▁": 589,
+    ",▁used▁as▁food▁industry▁": 590,
+    ",▁used▁as▁food▁industry▁agent▁": 591,
+    "disinfectant▁phenol▁": 592,
+    "synthesize▁the▁antibiotic▁": 593,
+    "metronidazole▁for▁infection▁": 594,
+    "salicylic▁acid▁for▁acne▁treatment▁": 595,
+    "analgesic▁acetaminophen▁": 596,
+    "vanillin▁for▁food▁industry▁": 597,
+    "chlorobenzene▁for▁chemical▁synthesis▁": 598,
+    "monomer▁styrene▁": 599,
+    "isonicotinamide▁for▁chemical▁synthesis▁": 600,
+    "aspirin▁for▁pain▁relief▁": 601,
+    "cytosine▁for▁biochemistry▁": 602,
+    "benzoic▁acid▁,▁a▁preservative▁": 603,
+    "—▁a▁nsaid▁targeting▁": 604,
+    "sweetener▁saccharin▁": 605,
+    "benzyl▁alcohol▁,▁a▁preservative▁": 606,
+    "uracil▁for▁biochemistry▁": 607,
+    "generate▁a▁antibiotic▁": 608,
+    "generate▁a▁antibiotic▁with▁the▁structure▁of▁": 609,
+    "pyrrole▁for▁chemical▁synthesis▁": 610,
+    "pyridine▁for▁chemical▁synthesis▁": 611,
+    "acetanilide▁for▁chemical▁synthesis▁": 612,
+    "aniline▁,▁a▁": 613,
+    "aniline▁,▁a▁precursor▁": 614,
+    "paracetamol▁,▁a▁analgesic▁": 615,
+    "catechol▁for▁chemical▁synthesis▁": 616,
+    "toluene▁for▁chemical▁synthesis▁": 617,
+    "nicotinic▁acid▁,▁a▁": 618,
+    "nicotinic▁acid▁,▁a▁vitamin▁": 619,
+    "bromobenzene▁for▁chemical▁synthesis▁": 620,
+    "sweetener▁aspartame▁": 621,
+    "resorcinol▁for▁chemical▁synthesis▁": 622,
+    "anthranilic▁acid▁for▁chemical▁synthesis▁": 623,
+    "sulfanilamide▁for▁infection▁": 624,
+    "anisol▁for▁chemical▁synthesis▁": 625,
+    "indole▁for▁chemical▁synthesis▁": 626,
+    "hippuric▁acid▁for▁biochemistry▁": 627,
+    ",▁a▁compound▁for▁food▁industry▁": 628,
+    "analgesic▁paracetamol▁": 629,
+    "methyl▁salicylate▁,▁a▁": 630,
+    "methyl▁salicylate▁,▁a▁liniment▁": 631,
+    "—▁a▁antibiotic▁targeting▁": 632,
+    "the▁antibiotic▁": 633,
+    "imidazole▁for▁chemical▁synthesis▁": 634,
+    "nicotinic▁acid▁for▁nutrition▁": 635,
+    "guanine▁for▁biochemistry▁": 636,
+    "acetophenone▁for▁chemical▁synthesis▁": 637,
+    "isoniazid▁for▁tuberculosis▁": 638,
+    "—▁antibiotic▁for▁infection▁": 639,
+    "nicotinic▁acid▁—▁a▁": 640,
+    "nicotinic▁acid▁—▁a▁vitamin▁": 641,
+    "precursor▁aniline▁for▁chemical▁synthesis▁": 642,
+    "generate▁a▁analgesic▁": 643,
+    "generate▁a▁analgesic▁with▁the▁structure▁of▁": 644,
+    "create▁a▁sweetener▁for▁food▁industry▁": 645,
+    "create▁a▁sweetener▁for▁food▁industry▁,▁specifically▁": 646,
+    "antibiotic▁for▁tuberculosis▁": 647,
+    "hippuric▁acid▁—▁a▁intermediate▁": 648,
+    "generate▁paracetamol▁": 649,
+    "used▁in▁acne▁treatment▁": 650,
+    ",▁used▁as▁inflammation▁": 651,
+    ",▁used▁as▁inflammation▁agent▁": 652,
+    "—▁preservative▁": 653,
+    "vitamin▁for▁nutrition▁": 654,
+    "generate▁acetaminophen▁": 655,
+    "xanthine▁—▁a▁intermediate▁": 656,
+    "fragrance▁coumarin▁for▁perfumery▁": 657,
+    ",▁an▁aromatic▁analgesic▁": 658,
+    "vanillin▁—▁a▁": 659,
+    "vanillin▁—▁a▁flavorant▁": 660,
+    ",▁a▁compound▁for▁inflammation▁": 661,
+    "create▁a▁antibiotic▁for▁infection▁": 662,
+    "create▁a▁antibiotic▁for▁infection▁,▁specifically▁": 663,
+    "used▁in▁tuberculosis▁": 664,
+    "acetaminophen▁—▁a▁analgesic▁": 665,
+    ",▁used▁for▁antiseptic▁": 666,
+    "generate▁benzoic▁acid▁": 667,
+    "paracetamol▁—▁a▁analgesic▁": 668,
+    "used▁in▁polymer▁synthesis▁": 669,
+    ",▁used▁as▁infection▁": 670,
+    ",▁used▁as▁infection▁agent▁": 671,
+    "disinfectant▁phenol▁for▁antiseptic▁": 672,
+    "salicylic▁acid▁,▁a▁nsaid▁": 673,
+    "used▁in▁alertness▁": 674,
+    "benzyl▁alcohol▁—▁a▁preservative▁": 675,
+    "generate▁phenol▁": 676,
+    "analgesic▁acetaminophen▁for▁pain▁relief▁": 677,
+    ",▁used▁for▁infection▁": 678,
+    "create▁a▁analgesic▁for▁pain▁relief▁": 679,
+    "create▁a▁analgesic▁for▁pain▁relief▁,▁specifically▁": 680,
+    ",▁a▁compound▁for▁infection▁": 681,
+    "flavorant▁vanillin▁for▁food▁industry▁": 682,
+    "—▁a▁nsaid▁targeting▁inflammation▁": 683,
+    "—▁a▁nsaid▁used▁in▁inflammation▁": 684,
+    "phenol▁—▁a▁": 685,
+    "phenol▁—▁a▁disinfectant▁": 686,
+    "targeting▁antiseptic▁": 687,
+    "—▁analgesic▁for▁pain▁relief▁": 688,
+    "benzoic▁acid▁—▁a▁preservative▁": 689,
+    "methyl▁salicylate▁—▁a▁": 690,
+    "methyl▁salicylate▁—▁a▁liniment▁": 691,
+    "saccharin▁—▁a▁sweetener▁": 692,
+    "generate▁aspartame▁": 693,
+    "styrene▁—▁a▁": 694,
+    "styrene▁—▁a▁monomer▁": 695,
+    "generate▁a▁preservative▁": 696,
+    "generate▁a▁preservative▁with▁the▁structure▁of▁": 697,
+    "generate▁a▁sweetener▁": 698,
+    "generate▁a▁sweetener▁with▁the▁structure▁of▁": 699,
+    "used▁in▁nutrition▁": 700,
+    "sweetener▁saccharin▁for▁food▁industry▁": 701,
+    "—▁nsaid▁for▁inflammation▁": 702,
+    "liniment▁methyl▁salicylate▁for▁pain▁relief▁": 703,
+    "sweetener▁aspartame▁for▁food▁industry▁": 704,
+    "flavorant▁for▁food▁industry▁": 705,
+    ",▁used▁for▁inflammation▁": 706,
+    "disinfectant▁for▁antiseptic▁": 707,
+    "coumarin▁—▁a▁": 708,
+    "coumarin▁—▁a▁fragrance▁": 709,
+    "used▁in▁perfumery▁": 710,
+    "aspirin▁—▁a▁nsaid▁": 711,
+    "hippuric▁acid▁,▁a▁intermediate▁": 712,
+    "—▁sweetener▁for▁food▁industry▁": 713,
+    "ibuprofen▁,▁a▁nsaid▁": 714,
+    "stimulant▁for▁alertness▁": 715,
+    "fragrance▁for▁perfumery▁": 716,
+    "generate▁saccharin▁": 717,
+    "preservative▁benzoic▁acid▁for▁antifungal▁": 718,
+    "stimulant▁caffeine▁for▁alertness▁": 719,
+    "caffeine▁—▁a▁": 720,
+    "caffeine▁—▁a▁stimulant▁": 721,
+    "analgesic▁paracetamol▁for▁pain▁relief▁": 722,
+    "used▁in▁antifungal▁": 723,
+    "generate▁methyl▁salicylate▁": 724,
+    "—▁a▁antibiotic▁targeting▁infection▁": 725,
+    "monomer▁styrene▁for▁polymer▁synthesis▁": 726,
+    "xanthine▁,▁a▁intermediate▁": 727,
+    "aspirin▁,▁a▁nsaid▁": 728,
+    "aspartame▁—▁a▁sweetener▁": 729,
+    "generate▁styrene▁": 730,
+    "vitamin▁nicotinic▁acid▁for▁nutrition▁": 731,
+    "precursor▁for▁chemical▁synthesis▁": 732,
+    "monomer▁for▁polymer▁synthesis▁": 733,
+    ",▁a▁compound▁for▁antiseptic▁": 734,
+    ",▁used▁as▁antiseptic▁": 735,
+    ",▁used▁as▁antiseptic▁agent▁": 736,
+    ",▁an▁aromatic▁sweetener▁": 737,
+    "liniment▁for▁pain▁relief▁": 738,
+    "generate▁coumarin▁": 739,
+    "—▁intermediate▁for▁biochemistry▁": 740,
+    "aniline▁—▁a▁": 741,
+    "aniline▁—▁a▁precursor▁": 742,
+    "create▁a▁preservative▁": 743,
+    ",▁an▁aromatic▁preservative▁": 744,
+    "create▁a▁nsaid▁for▁inflammation▁": 745,
+    "create▁a▁nsaid▁for▁inflammation▁,▁specifically▁": 746,
+    "naproxen▁,▁a▁nsaid▁": 747,
+    "create▁a▁intermediate▁for▁biochemistry▁": 748,
+    "create▁a▁intermediate▁for▁biochemistry▁,▁specifically▁": 749,
+    "preservative▁benzyl▁alcohol▁for▁antiseptic▁": 750,
+    "—▁a▁antibiotic▁used▁in▁infection▁": 751
+  },
+  "merges": [
+    {
+      "pair": [
+        "c",
+        "1"
+      ],
+      "new": "c1"
+    },
+    {
+      "pair": [
+        "chemical▁",
+        "synthesis▁"
+      ],
+      "new": "chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁",
+        "a▁"
+      ],
+      "new": ",▁a▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "chemical▁synthesis▁"
+      ],
+      "new": "for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "cccc",
+        "1"
+      ],
+      "new": "cccc1"
+    },
+    {
+      "pair": [
+        "O",
+        ")"
+      ],
+      "new": "O)"
+    },
+    {
+      "pair": [
+        "c1cc",
+        "ccc1"
+      ],
+      "new": "c1ccccc1"
+    },
+    {
+      "pair": [
+        ",▁",
+        "used▁"
+      ],
+      "new": ",▁used▁"
+    },
+    {
+      "pair": [
+        "used▁",
+        "in▁"
+      ],
+      "new": "used▁in▁"
+    },
+    {
+      "pair": [
+        "—▁",
+        "a▁"
+      ],
+      "new": "—▁a▁"
+    },
+    {
+      "pair": [
+        ",▁",
+        "an▁"
+      ],
+      "new": ",▁an▁"
+    },
+    {
+      "pair": [
+        ",▁an▁",
+        "aromatic▁"
+      ],
+      "new": ",▁an▁aromatic▁"
+    },
+    {
+      "pair": [
+        "cccc",
+        "c1"
+      ],
+      "new": "ccccc1"
+    },
+    {
+      "pair": [
+        "c",
+        "c1"
+      ],
+      "new": "cc1"
+    },
+    {
+      "pair": [
+        "(",
+        "C"
+      ],
+      "new": "(C"
+    },
+    {
+      "pair": [
+        "c",
+        "c"
+      ],
+      "new": "cc"
+    },
+    {
+      "pair": [
+        ",▁a▁",
+        "intermediate▁"
+      ],
+      "new": ",▁a▁intermediate▁"
+    },
+    {
+      "pair": [
+        "the▁",
+        "intermediate▁"
+      ],
+      "new": "the▁intermediate▁"
+    },
+    {
+      "pair": [
+        "CC(=",
+        "O)Nc1"
+      ],
+      "new": "CC(=O)Nc1"
+    },
+    {
+      "pair": [
+        "[nH]c",
+        "(=O)"
+      ],
+      "new": "[nH]c(=O)"
+    },
+    {
+      "pair": [
+        "NC(=",
+        "O)c1c"
+      ],
+      "new": "NC(=O)c1c"
+    },
+    {
+      "pair": [
+        "C(=O",
+        ")"
+      ],
+      "new": "C(=O)"
+    },
+    {
+      "pair": [
+        ",▁a▁",
+        "compound▁"
+      ],
+      "new": ",▁a▁compound▁"
+    },
+    {
+      "pair": [
+        ",▁used▁",
+        "as▁"
+      ],
+      "new": ",▁used▁as▁"
+    },
+    {
+      "pair": [
+        "i▁",
+        "need▁"
+      ],
+      "new": "i▁need▁"
+    },
+    {
+      "pair": [
+        "give▁",
+        "me▁"
+      ],
+      "new": "give▁me▁"
+    },
+    {
+      "pair": [
+        "containing▁",
+        "a▁"
+      ],
+      "new": "containing▁a▁"
+    },
+    {
+      "pair": [
+        "containing▁a▁",
+        "benzene▁"
+      ],
+      "new": "containing▁a▁benzene▁"
+    },
+    {
+      "pair": [
+        "containing▁a▁benzene▁",
+        "ring▁"
+      ],
+      "new": "containing▁a▁benzene▁ring▁"
+    },
+    {
+      "pair": [
+        "generate▁",
+        "a▁"
+      ],
+      "new": "generate▁a▁"
+    },
+    {
+      "pair": [
+        "with▁",
+        "the▁"
+      ],
+      "new": "with▁the▁"
+    },
+    {
+      "pair": [
+        "with▁the▁",
+        "structure▁"
+      ],
+      "new": "with▁the▁structure▁"
+    },
+    {
+      "pair": [
+        "with▁the▁structure▁",
+        "of▁"
+      ],
+      "new": "with▁the▁structure▁of▁"
+    },
+    {
+      "pair": [
+        ",▁an▁aromatic▁",
+        "compound▁"
+      ],
+      "new": ",▁an▁aromatic▁compound▁"
+    },
+    {
+      "pair": [
+        "the▁",
+        "molecule▁"
+      ],
+      "new": "the▁molecule▁"
+    },
+    {
+      "pair": [
+        "create▁",
+        "a▁"
+      ],
+      "new": "create▁a▁"
+    },
+    {
+      "pair": [
+        ",▁",
+        "specifically▁"
+      ],
+      "new": ",▁specifically▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "chemical▁synthesis▁"
+      ],
+      "new": "used▁in▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "pain▁",
+        "relief▁"
+      ],
+      "new": "pain▁relief▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "biochemistry▁"
+      ],
+      "new": "for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "—▁a▁",
+        "intermediate▁"
+      ],
+      "new": "—▁a▁intermediate▁"
+    },
+    {
+      "pair": [
+        "Oc1c",
+        "cccc1"
+      ],
+      "new": "Oc1ccccc1"
+    },
+    {
+      "pair": [
+        "CC(=O)Nc1",
+        "ccc("
+      ],
+      "new": "CC(=O)Nc1ccc("
+    },
+    {
+      "pair": [
+        "CC(=O)Nc1ccc(",
+        "O)cc"
+      ],
+      "new": "CC(=O)Nc1ccc(O)cc"
+    },
+    {
+      "pair": [
+        "CC(=O)Nc1ccc(O)cc",
+        "1"
+      ],
+      "new": "CC(=O)Nc1ccc(O)cc1"
+    },
+    {
+      "pair": [
+        "Nc1c",
+        "cccc1"
+      ],
+      "new": "Nc1ccccc1"
+    },
+    {
+      "pair": [
+        "cccc",
+        "1C(="
+      ],
+      "new": "cccc1C(="
+    },
+    {
+      "pair": [
+        "cccc1C(=",
+        "O)"
+      ],
+      "new": "cccc1C(=O)"
+    },
+    {
+      "pair": [
+        "cccc1C(=O)",
+        "O"
+      ],
+      "new": "cccc1C(=O)O"
+    },
+    {
+      "pair": [
+        "COc1",
+        "ccccc1"
+      ],
+      "new": "COc1ccccc1"
+    },
+    {
+      "pair": [
+        "COC(",
+        "=O)c"
+      ],
+      "new": "COC(=O)c"
+    },
+    {
+      "pair": [
+        "COC(=O)c",
+        "1ccc"
+      ],
+      "new": "COC(=O)c1ccc"
+    },
+    {
+      "pair": [
+        "cc",
+        "("
+      ],
+      "new": "cc("
+    },
+    {
+      "pair": [
+        "N)cc",
+        "1"
+      ],
+      "new": "N)cc1"
+    },
+    {
+      "pair": [
+        "c",
+        "2"
+      ],
+      "new": "c2"
+    },
+    {
+      "pair": [
+        "n",
+        "cc1"
+      ],
+      "new": "ncc1"
+    },
+    {
+      "pair": [
+        "Cc1c",
+        "cccc1"
+      ],
+      "new": "Cc1ccccc1"
+    },
+    {
+      "pair": [
+        "O",
+        "="
+      ],
+      "new": "O="
+    },
+    {
+      "pair": [
+        "c2cc",
+        "ccc2"
+      ],
+      "new": "c2ccccc2"
+    },
+    {
+      "pair": [
+        "C(=O)",
+        "N"
+      ],
+      "new": "C(=O)N"
+    },
+    {
+      "pair": [
+        "=Cc1",
+        "ccccc1"
+      ],
+      "new": "=Cc1ccccc1"
+    },
+    {
+      "pair": [
+        "NC(=",
+        "O)"
+      ],
+      "new": "NC(=O)"
+    },
+    {
+      "pair": [
+        "n",
+        "1"
+      ],
+      "new": "n1"
+    },
+    {
+      "pair": [
+        "O=C(O)",
+        "c1ccccc1"
+      ],
+      "new": "O=C(O)c1ccccc1"
+    },
+    {
+      "pair": [
+        "(C",
+        ")"
+      ],
+      "new": "(C)"
+    },
+    {
+      "pair": [
+        "intermediate▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "intermediate▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "food▁",
+        "industry▁"
+      ],
+      "new": "food▁industry▁"
+    },
+    {
+      "pair": [
+        "produce▁",
+        "the▁"
+      ],
+      "new": "produce▁the▁"
+    },
+    {
+      "pair": [
+        "synthesize▁",
+        "the▁"
+      ],
+      "new": "synthesize▁the▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "pain▁relief▁"
+      ],
+      "new": "for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        ",▁a▁compound▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": ",▁a▁compound▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁",
+        "chemical▁synthesis▁"
+      ],
+      "new": ",▁used▁as▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁chemical▁synthesis▁",
+        "agent▁"
+      ],
+      "new": ",▁used▁as▁chemical▁synthesis▁agent▁"
+    },
+    {
+      "pair": [
+        "targeting▁",
+        "chemical▁synthesis▁"
+      ],
+      "new": "targeting▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁used▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": ",▁used▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "food▁industry▁"
+      ],
+      "new": "for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "anthranilic▁",
+        "acid▁"
+      ],
+      "new": "anthranilic▁acid▁"
+    },
+    {
+      "pair": [
+        "ethyl▁",
+        "benzoate▁"
+      ],
+      "new": "ethyl▁benzoate▁"
+    },
+    {
+      "pair": [
+        "nicotinic▁",
+        "acid▁"
+      ],
+      "new": "nicotinic▁acid▁"
+    },
+    {
+      "pair": [
+        "synthesize▁",
+        "the▁intermediate▁"
+      ],
+      "new": "synthesize▁the▁intermediate▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁",
+        "intermediate▁"
+      ],
+      "new": "generate▁a▁intermediate▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁intermediate▁",
+        "with▁the▁structure▁of▁"
+      ],
+      "new": "generate▁a▁intermediate▁with▁the▁structure▁of▁"
+    },
+    {
+      "pair": [
+        ",▁an▁aromatic▁",
+        "intermediate▁"
+      ],
+      "new": ",▁an▁aromatic▁intermediate▁"
+    },
+    {
+      "pair": [
+        "benzyl▁",
+        "alcohol▁"
+      ],
+      "new": "benzyl▁alcohol▁"
+    },
+    {
+      "pair": [
+        "cinnamic▁",
+        "acid▁"
+      ],
+      "new": "cinnamic▁acid▁"
+    },
+    {
+      "pair": [
+        "barbituric▁",
+        "acid▁"
+      ],
+      "new": "barbituric▁acid▁"
+    },
+    {
+      "pair": [
+        "salicylic▁",
+        "acid▁"
+      ],
+      "new": "salicylic▁acid▁"
+    },
+    {
+      "pair": [
+        "benzoic▁",
+        "acid▁"
+      ],
+      "new": "benzoic▁acid▁"
+    },
+    {
+      "pair": [
+        "hippuric▁",
+        "acid▁"
+      ],
+      "new": "hippuric▁acid▁"
+    },
+    {
+      "pair": [
+        ",▁a▁intermediate▁",
+        "containing▁a▁benzene▁ring▁"
+      ],
+      "new": ",▁a▁intermediate▁containing▁a▁benzene▁ring▁"
+    },
+    {
+      "pair": [
+        "methyl▁",
+        "salicylate▁"
+      ],
+      "new": "methyl▁salicylate▁"
+    },
+    {
+      "pair": [
+        "produce▁",
+        "the▁intermediate▁"
+      ],
+      "new": "produce▁the▁intermediate▁"
+    },
+    {
+      "pair": [
+        "Oc1ccccc1",
+        "O"
+      ],
+      "new": "Oc1ccccc1O"
+    },
+    {
+      "pair": [
+        "Nc1c",
+        "cccc1C(=O)O"
+      ],
+      "new": "Nc1ccccc1C(=O)O"
+    },
+    {
+      "pair": [
+        "c1[nH]",
+        "cnc1"
+      ],
+      "new": "c1[nH]cnc1"
+    },
+    {
+      "pair": [
+        "C",
+        "COC(=O)c1ccc"
+      ],
+      "new": "CCOC(=O)c1ccc"
+    },
+    {
+      "pair": [
+        "CCOC(=O)c1ccc",
+        "cc1"
+      ],
+      "new": "CCOC(=O)c1ccccc1"
+    },
+    {
+      "pair": [
+        "Nc1c",
+        "cc("
+      ],
+      "new": "Nc1ccc("
+    },
+    {
+      "pair": [
+        "Nc1ccc(",
+        "S"
+      ],
+      "new": "Nc1ccc(S"
+    },
+    {
+      "pair": [
+        "Nc1ccc(S",
+        "(=O)"
+      ],
+      "new": "Nc1ccc(S(=O)"
+    },
+    {
+      "pair": [
+        "Nc1ccc(S(=O)",
+        "(=O)"
+      ],
+      "new": "Nc1ccc(S(=O)(=O)"
+    },
+    {
+      "pair": [
+        "Nc1ccc(S(=O)(=O)",
+        "N)cc1"
+      ],
+      "new": "Nc1ccc(S(=O)(=O)N)cc1"
+    },
+    {
+      "pair": [
+        "OC(=",
+        "O)c1c"
+      ],
+      "new": "OC(=O)c1c"
+    },
+    {
+      "pair": [
+        "OC(=O)c1c",
+        "c"
+      ],
+      "new": "OC(=O)c1cc"
+    },
+    {
+      "pair": [
+        "OC(=O)c1cc",
+        "cnc1"
+      ],
+      "new": "OC(=O)c1cccnc1"
+    },
+    {
+      "pair": [
+        "O=c1",
+        "ccc2"
+      ],
+      "new": "O=c1ccc2"
+    },
+    {
+      "pair": [
+        "O=c1ccc2",
+        "cccc"
+      ],
+      "new": "O=c1ccc2cccc"
+    },
+    {
+      "pair": [
+        "O=c1ccc2cccc",
+        "c2"
+      ],
+      "new": "O=c1ccc2ccccc2"
+    },
+    {
+      "pair": [
+        "O=c1ccc2ccccc2",
+        "o"
+      ],
+      "new": "O=c1ccc2ccccc2o"
+    },
+    {
+      "pair": [
+        "O=c1ccc2ccccc2o",
+        "1"
+      ],
+      "new": "O=c1ccc2ccccc2o1"
+    },
+    {
+      "pair": [
+        "O=[N+]([O-])",
+        "c1ccccc1"
+      ],
+      "new": "O=[N+]([O-])c1ccccc1"
+    },
+    {
+      "pair": [
+        "O=c1",
+        "[nH]c(=O)"
+      ],
+      "new": "O=c1[nH]c(=O)"
+    },
+    {
+      "pair": [
+        "O=c1[nH]c(=O)",
+        "c2[nH]"
+      ],
+      "new": "O=c1[nH]c(=O)c2[nH]"
+    },
+    {
+      "pair": [
+        "O=c1[nH]c(=O)c2[nH]",
+        "cnc2[nH"
+      ],
+      "new": "O=c1[nH]c(=O)c2[nH]cnc2[nH"
+    },
+    {
+      "pair": [
+        "O=c1[nH]c(=O)c2[nH]cnc2[nH",
+        "]"
+      ],
+      "new": "O=c1[nH]c(=O)c2[nH]cnc2[nH]"
+    },
+    {
+      "pair": [
+        "O=c1[nH]c(=O)c2[nH]cnc2[nH]",
+        "1"
+      ],
+      "new": "O=c1[nH]c(=O)c2[nH]cnc2[nH]1"
+    },
+    {
+      "pair": [
+        "c1cc",
+        "ncc1"
+      ],
+      "new": "c1ccncc1"
+    },
+    {
+      "pair": [
+        "CC(=",
+        "O)c1c"
+      ],
+      "new": "CC(=O)c1c"
+    },
+    {
+      "pair": [
+        "CC(=O)c1c",
+        "cccc1"
+      ],
+      "new": "CC(=O)c1ccccc1"
+    },
+    {
+      "pair": [
+        "c1cc",
+        "[nH]c"
+      ],
+      "new": "c1cc[nH]c"
+    },
+    {
+      "pair": [
+        "c1cc[nH]c",
+        "1"
+      ],
+      "new": "c1cc[nH]c1"
+    },
+    {
+      "pair": [
+        "O=c1",
+        "cc"
+      ],
+      "new": "O=c1cc"
+    },
+    {
+      "pair": [
+        "O=c1cc",
+        "[nH]c(=O)"
+      ],
+      "new": "O=c1cc[nH]c(=O)"
+    },
+    {
+      "pair": [
+        "O=c1cc[nH]c(=O)",
+        "[nH]1"
+      ],
+      "new": "O=c1cc[nH]c(=O)[nH]1"
+    },
+    {
+      "pair": [
+        "NC(=O)c1c",
+        "cccc1"
+      ],
+      "new": "NC(=O)c1ccccc1"
+    },
+    {
+      "pair": [
+        "O",
+        "Cc1ccccc1"
+      ],
+      "new": "OCc1ccccc1"
+    },
+    {
+      "pair": [
+        "C",
+        "l"
+      ],
+      "new": "Cl"
+    },
+    {
+      "pair": [
+        "Cl",
+        "c1ccccc1"
+      ],
+      "new": "Clc1ccccc1"
+    },
+    {
+      "pair": [
+        "Oc1c",
+        "cc(O)"
+      ],
+      "new": "Oc1ccc(O)"
+    },
+    {
+      "pair": [
+        "Oc1ccc(O)",
+        "cc1"
+      ],
+      "new": "Oc1ccc(O)cc1"
+    },
+    {
+      "pair": [
+        "O=[N+]([O-])",
+        "c1cc"
+      ],
+      "new": "O=[N+]([O-])c1cc"
+    },
+    {
+      "pair": [
+        "O=[N+]([O-])c1cc",
+        "(C"
+      ],
+      "new": "O=[N+]([O-])c1cc(C"
+    },
+    {
+      "pair": [
+        "O=[N+]([O-])c1cc(C",
+        "O)"
+      ],
+      "new": "O=[N+]([O-])c1cc(CO)"
+    },
+    {
+      "pair": [
+        "O=[N+]([O-])c1cc(CO)",
+        "n"
+      ],
+      "new": "O=[N+]([O-])c1cc(CO)n"
+    },
+    {
+      "pair": [
+        "O=[N+]([O-])c1cc(CO)n",
+        "cc1C"
+      ],
+      "new": "O=[N+]([O-])c1cc(CO)ncc1C"
+    },
+    {
+      "pair": [
+        "O=[N+]([O-])c1cc(CO)ncc1C",
+        "l"
+      ],
+      "new": "O=[N+]([O-])c1cc(CO)ncc1Cl"
+    },
+    {
+      "pair": [
+        "NC(=O)c1c",
+        "c"
+      ],
+      "new": "NC(=O)c1cc"
+    },
+    {
+      "pair": [
+        "NC(=O)c1cc",
+        "ncc1"
+      ],
+      "new": "NC(=O)c1ccncc1"
+    },
+    {
+      "pair": [
+        "c1cc",
+        "o"
+      ],
+      "new": "c1cco"
+    },
+    {
+      "pair": [
+        "c1cco",
+        "c1"
+      ],
+      "new": "c1ccoc1"
+    },
+    {
+      "pair": [
+        "c1cc",
+        "c2[nH]"
+      ],
+      "new": "c1ccc2[nH]"
+    },
+    {
+      "pair": [
+        "c1ccc2[nH]",
+        "ccc2"
+      ],
+      "new": "c1ccc2[nH]ccc2"
+    },
+    {
+      "pair": [
+        "c1ccc2[nH]ccc2",
+        "c1"
+      ],
+      "new": "c1ccc2[nH]ccc2c1"
+    },
+    {
+      "pair": [
+        "O=",
+        "S"
+      ],
+      "new": "O=S"
+    },
+    {
+      "pair": [
+        "O=S",
+        "1"
+      ],
+      "new": "O=S1"
+    },
+    {
+      "pair": [
+        "O=S1",
+        "(=O)"
+      ],
+      "new": "O=S1(=O)"
+    },
+    {
+      "pair": [
+        "O=S1(=O)",
+        "c2ccccc2"
+      ],
+      "new": "O=S1(=O)c2ccccc2"
+    },
+    {
+      "pair": [
+        "O=S1(=O)c2ccccc2",
+        "C(=O)N"
+      ],
+      "new": "O=S1(=O)c2ccccc2C(=O)N"
+    },
+    {
+      "pair": [
+        "O=S1(=O)c2ccccc2C(=O)N",
+        "1"
+      ],
+      "new": "O=S1(=O)c2ccccc2C(=O)N1"
+    },
+    {
+      "pair": [
+        "O",
+        "=Cc1ccccc1"
+      ],
+      "new": "O=Cc1ccccc1"
+    },
+    {
+      "pair": [
+        "NC(=O)c1c",
+        "cc("
+      ],
+      "new": "NC(=O)c1ccc("
+    },
+    {
+      "pair": [
+        "NC(=O)c1ccc(",
+        "N)cc1"
+      ],
+      "new": "NC(=O)c1ccc(N)cc1"
+    },
+    {
+      "pair": [
+        "OC(=",
+        "O)"
+      ],
+      "new": "OC(=O)"
+    },
+    {
+      "pair": [
+        "OC(=O)",
+        "/"
+      ],
+      "new": "OC(=O)/"
+    },
+    {
+      "pair": [
+        "OC(=O)/",
+        "C"
+      ],
+      "new": "OC(=O)/C"
+    },
+    {
+      "pair": [
+        "OC(=O)/C",
+        "="
+      ],
+      "new": "OC(=O)/C="
+    },
+    {
+      "pair": [
+        "OC(=O)/C=",
+        "C"
+      ],
+      "new": "OC(=O)/C=C"
+    },
+    {
+      "pair": [
+        "OC(=O)/C=C",
+        "/"
+      ],
+      "new": "OC(=O)/C=C/"
+    },
+    {
+      "pair": [
+        "OC(=O)/C=C/",
+        "c1ccccc1"
+      ],
+      "new": "OC(=O)/C=C/c1ccccc1"
+    },
+    {
+      "pair": [
+        "CN1C=NC2=C1C",
+        "(=O)"
+      ],
+      "new": "CN1C=NC2=C1C(=O)"
+    },
+    {
+      "pair": [
+        "CN1C=NC2=C1C(=O)",
+        "N"
+      ],
+      "new": "CN1C=NC2=C1C(=O)N"
+    },
+    {
+      "pair": [
+        "CN1C=NC2=C1C(=O)N",
+        "("
+      ],
+      "new": "CN1C=NC2=C1C(=O)N("
+    },
+    {
+      "pair": [
+        "CN1C=NC2=C1C(=O)N(",
+        "C(=O)N"
+      ],
+      "new": "CN1C=NC2=C1C(=O)N(C(=O)N"
+    },
+    {
+      "pair": [
+        "CN1C=NC2=C1C(=O)N(C(=O)N",
+        "2"
+      ],
+      "new": "CN1C=NC2=C1C(=O)N(C(=O)N2"
+    },
+    {
+      "pair": [
+        "CN1C=NC2=C1C(=O)N(C(=O)N2",
+        "C"
+      ],
+      "new": "CN1C=NC2=C1C(=O)N(C(=O)N2C"
+    },
+    {
+      "pair": [
+        "CN1C=NC2=C1C(=O)N(C(=O)N2C",
+        ")"
+      ],
+      "new": "CN1C=NC2=C1C(=O)N(C(=O)N2C)"
+    },
+    {
+      "pair": [
+        "CN1C=NC2=C1C(=O)N(C(=O)N2C)",
+        "C"
+      ],
+      "new": "CN1C=NC2=C1C(=O)N(C(=O)N2C)C"
+    },
+    {
+      "pair": [
+        "COC(",
+        "=O)Cc"
+      ],
+      "new": "COC(=O)Cc"
+    },
+    {
+      "pair": [
+        "COC(=O)Cc",
+        "1ccc"
+      ],
+      "new": "COC(=O)Cc1ccc"
+    },
+    {
+      "pair": [
+        "COC(=O)Cc1ccc",
+        "cc1"
+      ],
+      "new": "COC(=O)Cc1ccccc1"
+    },
+    {
+      "pair": [
+        "COC(=O)Cc1ccccc1",
+        "NC(=O)"
+      ],
+      "new": "COC(=O)Cc1ccccc1NC(=O)"
+    },
+    {
+      "pair": [
+        "COC(=O)Cc1ccccc1NC(=O)",
+        "C"
+      ],
+      "new": "COC(=O)Cc1ccccc1NC(=O)C"
+    },
+    {
+      "pair": [
+        "COC(=O)Cc1ccccc1NC(=O)C",
+        "c2ccccc2"
+      ],
+      "new": "COC(=O)Cc1ccccc1NC(=O)Cc2ccccc2"
+    },
+    {
+      "pair": [
+        "COC(=O)Cc1ccccc1NC(=O)Cc2ccccc2",
+        "N"
+      ],
+      "new": "COC(=O)Cc1ccccc1NC(=O)Cc2ccccc2N"
+    },
+    {
+      "pair": [
+        "B",
+        "r"
+      ],
+      "new": "Br"
+    },
+    {
+      "pair": [
+        "Br",
+        "c1ccccc1"
+      ],
+      "new": "Brc1ccccc1"
+    },
+    {
+      "pair": [
+        "N",
+        "c1[nH]"
+      ],
+      "new": "Nc1[nH]"
+    },
+    {
+      "pair": [
+        "Nc1[nH]",
+        "c"
+      ],
+      "new": "Nc1[nH]c"
+    },
+    {
+      "pair": [
+        "Nc1[nH]c",
+        "(=O)"
+      ],
+      "new": "Nc1[nH]c(=O)"
+    },
+    {
+      "pair": [
+        "Nc1[nH]c(=O)",
+        "c2[nH]"
+      ],
+      "new": "Nc1[nH]c(=O)c2[nH]"
+    },
+    {
+      "pair": [
+        "Nc1[nH]c(=O)c2[nH]",
+        "c"
+      ],
+      "new": "Nc1[nH]c(=O)c2[nH]c"
+    },
+    {
+      "pair": [
+        "Nc1[nH]c(=O)c2[nH]c",
+        "n"
+      ],
+      "new": "Nc1[nH]c(=O)c2[nH]cn"
+    },
+    {
+      "pair": [
+        "Nc1[nH]c(=O)c2[nH]cn",
+        "c2"
+      ],
+      "new": "Nc1[nH]c(=O)c2[nH]cnc2"
+    },
+    {
+      "pair": [
+        "Nc1[nH]c(=O)c2[nH]cnc2",
+        "n1"
+      ],
+      "new": "Nc1[nH]c(=O)c2[nH]cnc2n1"
+    },
+    {
+      "pair": [
+        "O=",
+        "C"
+      ],
+      "new": "O=C"
+    },
+    {
+      "pair": [
+        "O=C",
+        "1"
+      ],
+      "new": "O=C1"
+    },
+    {
+      "pair": [
+        "O=C1",
+        "NC(=O)"
+      ],
+      "new": "O=C1NC(=O)"
+    },
+    {
+      "pair": [
+        "O=C1NC(=O)",
+        "NC(="
+      ],
+      "new": "O=C1NC(=O)NC(="
+    },
+    {
+      "pair": [
+        "O=C1NC(=O)NC(=",
+        "O)N1"
+      ],
+      "new": "O=C1NC(=O)NC(=O)N1"
+    },
+    {
+      "pair": [
+        "O=C(O)c1ccccc1",
+        "O"
+      ],
+      "new": "O=C(O)c1ccccc1O"
+    },
+    {
+      "pair": [
+        "C",
+        "COc1ccccc1"
+      ],
+      "new": "CCOc1ccccc1"
+    },
+    {
+      "pair": [
+        "C",
+        "C"
+      ],
+      "new": "CC"
+    },
+    {
+      "pair": [
+        "CC",
+        "(C)"
+      ],
+      "new": "CC(C)"
+    },
+    {
+      "pair": [
+        "CC(C)",
+        "Cc1c"
+      ],
+      "new": "CC(C)Cc1c"
+    },
+    {
+      "pair": [
+        "CC(C)Cc1c",
+        "cc(C(C)C(="
+      ],
+      "new": "CC(C)Cc1ccc(C(C)C(="
+    },
+    {
+      "pair": [
+        "CC(C)Cc1ccc(C(C)C(=",
+        "O)O)c"
+      ],
+      "new": "CC(C)Cc1ccc(C(C)C(=O)O)c"
+    },
+    {
+      "pair": [
+        "CC(C)Cc1ccc(C(C)C(=O)O)c",
+        "c1"
+      ],
+      "new": "CC(C)Cc1ccc(C(C)C(=O)O)cc1"
+    },
+    {
+      "pair": [
+        "O=C(O)",
+        "C"
+      ],
+      "new": "O=C(O)C"
+    },
+    {
+      "pair": [
+        "O=C(O)C",
+        "Nc1ccccc1"
+      ],
+      "new": "O=C(O)CNc1ccccc1"
+    },
+    {
+      "pair": [
+        "c1cc",
+        "s"
+      ],
+      "new": "c1ccs"
+    },
+    {
+      "pair": [
+        "c1ccs",
+        "c1"
+      ],
+      "new": "c1ccsc1"
+    },
+    {
+      "pair": [
+        "COc1",
+        "cc2c"
+      ],
+      "new": "COc1cc2c"
+    },
+    {
+      "pair": [
+        "COc1cc2c",
+        "c"
+      ],
+      "new": "COc1cc2cc"
+    },
+    {
+      "pair": [
+        "COc1cc2cc",
+        "(C"
+      ],
+      "new": "COc1cc2cc(C"
+    },
+    {
+      "pair": [
+        "COc1cc2cc(C",
+        "(C)"
+      ],
+      "new": "COc1cc2cc(C(C)"
+    },
+    {
+      "pair": [
+        "COc1cc2cc(C(C)",
+        "C(=O)"
+      ],
+      "new": "COc1cc2cc(C(C)C(=O)"
+    },
+    {
+      "pair": [
+        "COc1cc2cc(C(C)C(=O)",
+        "O)cc"
+      ],
+      "new": "COc1cc2cc(C(C)C(=O)O)cc"
+    },
+    {
+      "pair": [
+        "COc1cc2cc(C(C)C(=O)O)cc",
+        "c2cc"
+      ],
+      "new": "COc1cc2cc(C(C)C(=O)O)ccc2cc"
+    },
+    {
+      "pair": [
+        "COc1cc2cc(C(C)C(=O)O)ccc2cc",
+        "1"
+      ],
+      "new": "COc1cc2cc(C(C)C(=O)O)ccc2cc1"
+    },
+    {
+      "pair": [
+        "CC(=O)Nc1",
+        "ccccc1"
+      ],
+      "new": "CC(=O)Nc1ccccc1"
+    },
+    {
+      "pair": [
+        "COc1",
+        "cc"
+      ],
+      "new": "COc1cc"
+    },
+    {
+      "pair": [
+        "COc1cc",
+        "(C"
+      ],
+      "new": "COc1cc(C"
+    },
+    {
+      "pair": [
+        "COc1cc(C",
+        "=O)c"
+      ],
+      "new": "COc1cc(C=O)c"
+    },
+    {
+      "pair": [
+        "COc1cc(C=O)c",
+        "cc1O"
+      ],
+      "new": "COc1cc(C=O)ccc1O"
+    },
+    {
+      "pair": [
+        "Nc1ncnc2[n",
+        "H"
+      ],
+      "new": "Nc1ncnc2[nH"
+    },
+    {
+      "pair": [
+        "Nc1ncnc2[nH",
+        "]"
+      ],
+      "new": "Nc1ncnc2[nH]"
+    },
+    {
+      "pair": [
+        "Nc1ncnc2[nH]",
+        "cnc1"
+      ],
+      "new": "Nc1ncnc2[nH]cnc1"
+    },
+    {
+      "pair": [
+        "Nc1ncnc2[nH]cnc1",
+        "2"
+      ],
+      "new": "Nc1ncnc2[nH]cnc12"
+    },
+    {
+      "pair": [
+        "Nc1c",
+        "c"
+      ],
+      "new": "Nc1cc"
+    },
+    {
+      "pair": [
+        "Nc1cc",
+        "[nH]c(=O)"
+      ],
+      "new": "Nc1cc[nH]c(=O)"
+    },
+    {
+      "pair": [
+        "Nc1cc[nH]c(=O)",
+        "n1"
+      ],
+      "new": "Nc1cc[nH]c(=O)n1"
+    },
+    {
+      "pair": [
+        "CC(=",
+        "O)"
+      ],
+      "new": "CC(=O)"
+    },
+    {
+      "pair": [
+        "CC(=O)",
+        "Oc1c"
+      ],
+      "new": "CC(=O)Oc1c"
+    },
+    {
+      "pair": [
+        "CC(=O)Oc1c",
+        "cccc1C(=O)O"
+      ],
+      "new": "CC(=O)Oc1ccccc1C(=O)O"
+    },
+    {
+      "pair": [
+        "COC(=O)c1ccc",
+        "cc1O"
+      ],
+      "new": "COC(=O)c1ccccc1O"
+    },
+    {
+      "pair": [
+        "Oc1c",
+        "ccc("
+      ],
+      "new": "Oc1cccc("
+    },
+    {
+      "pair": [
+        "Oc1cccc(",
+        "O)"
+      ],
+      "new": "Oc1cccc(O)"
+    },
+    {
+      "pair": [
+        "Oc1cccc(O)",
+        "c1"
+      ],
+      "new": "Oc1cccc(O)c1"
+    },
+    {
+      "pair": [
+        "C",
+        "=Cc1ccccc1"
+      ],
+      "new": "C=Cc1ccccc1"
+    },
+    {
+      "pair": [
+        "—▁",
+        "intermediate▁for▁chemical▁synthesis▁"
+      ],
+      "new": "—▁intermediate▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁a▁intermediate▁",
+        "used▁in▁chemical▁synthesis▁"
+      ],
+      "new": ",▁a▁intermediate▁used▁in▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "—▁a▁intermediate▁",
+        "used▁in▁chemical▁synthesis▁"
+      ],
+      "new": "—▁a▁intermediate▁used▁in▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "—▁a▁intermediate▁",
+        "targeting▁chemical▁synthesis▁"
+      ],
+      "new": "—▁a▁intermediate▁targeting▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "create▁a▁",
+        "intermediate▁for▁chemical▁synthesis▁"
+      ],
+      "new": "create▁a▁intermediate▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "create▁a▁intermediate▁for▁chemical▁synthesis▁",
+        ",▁specifically▁"
+      ],
+      "new": "create▁a▁intermediate▁for▁chemical▁synthesis▁,▁specifically▁"
+    },
+    {
+      "pair": [
+        ",▁a▁",
+        "solvent▁"
+      ],
+      "new": ",▁a▁solvent▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "infection▁"
+      ],
+      "new": "for▁infection▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "antiseptic▁"
+      ],
+      "new": "for▁antiseptic▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "inflammation▁"
+      ],
+      "new": "for▁inflammation▁"
+    },
+    {
+      "pair": [
+        ",▁a▁",
+        "nucleobase▁"
+      ],
+      "new": ",▁a▁nucleobase▁"
+    },
+    {
+      "pair": [
+        "—▁a▁",
+        "solvent▁"
+      ],
+      "new": "—▁a▁solvent▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "biochemistry▁"
+      ],
+      "new": "used▁in▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "solvent▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "solvent▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁a▁",
+        "nsaid▁"
+      ],
+      "new": ",▁a▁nsaid▁"
+    },
+    {
+      "pair": [
+        "acne▁",
+        "treatment▁"
+      ],
+      "new": "acne▁treatment▁"
+    },
+    {
+      "pair": [
+        "polymer▁",
+        "synthesis▁"
+      ],
+      "new": "polymer▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁a▁",
+        "antibiotic▁"
+      ],
+      "new": ",▁a▁antibiotic▁"
+    },
+    {
+      "pair": [
+        "—▁a▁",
+        "nsaid▁"
+      ],
+      "new": "—▁a▁nsaid▁"
+    },
+    {
+      "pair": [
+        "—▁a▁",
+        "nucleobase▁"
+      ],
+      "new": "—▁a▁nucleobase▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "pain▁relief▁"
+      ],
+      "new": "used▁in▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "nucleobase▁",
+        "for▁biochemistry▁"
+      ],
+      "new": "nucleobase▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "tuberculosis▁"
+      ],
+      "new": "for▁tuberculosis▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "antifungal▁"
+      ],
+      "new": "for▁antifungal▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "nutrition▁"
+      ],
+      "new": "for▁nutrition▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "perfumery▁"
+      ],
+      "new": "for▁perfumery▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "alertness▁"
+      ],
+      "new": "for▁alertness▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "acne▁treatment▁"
+      ],
+      "new": "for▁acne▁treatment▁"
+    },
+    {
+      "pair": [
+        "for▁",
+        "polymer▁synthesis▁"
+      ],
+      "new": "for▁polymer▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁a▁",
+        "analgesic▁"
+      ],
+      "new": ",▁a▁analgesic▁"
+    },
+    {
+      "pair": [
+        "—▁a▁solvent▁",
+        "targeting▁chemical▁synthesis▁"
+      ],
+      "new": "—▁a▁solvent▁targeting▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁an▁aromatic▁",
+        "solvent▁"
+      ],
+      "new": ",▁an▁aromatic▁solvent▁"
+    },
+    {
+      "pair": [
+        ",▁a▁",
+        "sweetener▁"
+      ],
+      "new": ",▁a▁sweetener▁"
+    },
+    {
+      "pair": [
+        ",▁a▁compound▁",
+        "for▁biochemistry▁"
+      ],
+      "new": ",▁a▁compound▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "targeting▁",
+        "biochemistry▁"
+      ],
+      "new": "targeting▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "create▁a▁",
+        "solvent▁for▁chemical▁synthesis▁"
+      ],
+      "new": "create▁a▁solvent▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "create▁a▁solvent▁for▁chemical▁synthesis▁",
+        ",▁specifically▁"
+      ],
+      "new": "create▁a▁solvent▁for▁chemical▁synthesis▁,▁specifically▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁",
+        "biochemistry▁"
+      ],
+      "new": ",▁used▁as▁biochemistry▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁biochemistry▁",
+        "agent▁"
+      ],
+      "new": ",▁used▁as▁biochemistry▁agent▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "food▁industry▁"
+      ],
+      "new": "used▁in▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "synthesize▁the▁",
+        "solvent▁"
+      ],
+      "new": "synthesize▁the▁solvent▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁",
+        "solvent▁"
+      ],
+      "new": "generate▁a▁solvent▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁solvent▁",
+        "with▁the▁structure▁of▁"
+      ],
+      "new": "generate▁a▁solvent▁with▁the▁structure▁of▁"
+    },
+    {
+      "pair": [
+        "—▁a▁solvent▁",
+        "used▁in▁chemical▁synthesis▁"
+      ],
+      "new": "—▁a▁solvent▁used▁in▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "the▁",
+        "solvent▁"
+      ],
+      "new": "the▁solvent▁"
+    },
+    {
+      "pair": [
+        ",▁a▁solvent▁",
+        "containing▁a▁benzene▁ring▁"
+      ],
+      "new": ",▁a▁solvent▁containing▁a▁benzene▁ring▁"
+    },
+    {
+      "pair": [
+        ",▁a▁",
+        "preservative▁"
+      ],
+      "new": ",▁a▁preservative▁"
+    },
+    {
+      "pair": [
+        ",▁a▁solvent▁",
+        "used▁in▁chemical▁synthesis▁"
+      ],
+      "new": ",▁a▁solvent▁used▁in▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁used▁",
+        "for▁biochemistry▁"
+      ],
+      "new": ",▁used▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "produce▁the▁",
+        "solvent▁"
+      ],
+      "new": "produce▁the▁solvent▁"
+    },
+    {
+      "pair": [
+        "—▁",
+        "solvent▁for▁chemical▁synthesis▁"
+      ],
+      "new": "—▁solvent▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "—▁a▁",
+        "antibiotic▁"
+      ],
+      "new": "—▁a▁antibiotic▁"
+    },
+    {
+      "pair": [
+        ",▁a▁compound▁",
+        "for▁pain▁relief▁"
+      ],
+      "new": ",▁a▁compound▁for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "antibiotic▁",
+        "for▁infection▁"
+      ],
+      "new": "antibiotic▁for▁infection▁"
+    },
+    {
+      "pair": [
+        "sweetener▁",
+        "for▁food▁industry▁"
+      ],
+      "new": "sweetener▁for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        ",▁a▁nucleobase▁",
+        "used▁in▁biochemistry▁"
+      ],
+      "new": ",▁a▁nucleobase▁used▁in▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "the▁",
+        "nsaid▁"
+      ],
+      "new": "the▁nsaid▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁",
+        "pain▁relief▁"
+      ],
+      "new": ",▁used▁as▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁pain▁relief▁",
+        "agent▁"
+      ],
+      "new": ",▁used▁as▁pain▁relief▁agent▁"
+    },
+    {
+      "pair": [
+        ",▁used▁",
+        "for▁pain▁relief▁"
+      ],
+      "new": ",▁used▁for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "—▁a▁nucleobase▁",
+        "targeting▁biochemistry▁"
+      ],
+      "new": "—▁a▁nucleobase▁targeting▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "produce▁the▁",
+        "nsaid▁"
+      ],
+      "new": "produce▁the▁nsaid▁"
+    },
+    {
+      "pair": [
+        "synthesize▁the▁",
+        "nucleobase▁"
+      ],
+      "new": "synthesize▁the▁nucleobase▁"
+    },
+    {
+      "pair": [
+        "—▁a▁",
+        "analgesic▁"
+      ],
+      "new": "—▁a▁analgesic▁"
+    },
+    {
+      "pair": [
+        "targeting▁",
+        "pain▁relief▁"
+      ],
+      "new": "targeting▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁",
+        "nucleobase▁"
+      ],
+      "new": "generate▁a▁nucleobase▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁nucleobase▁",
+        "with▁the▁structure▁of▁"
+      ],
+      "new": "generate▁a▁nucleobase▁with▁the▁structure▁of▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "antiseptic▁"
+      ],
+      "new": "used▁in▁antiseptic▁"
+    },
+    {
+      "pair": [
+        "—▁",
+        "nucleobase▁for▁biochemistry▁"
+      ],
+      "new": "—▁nucleobase▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "—▁a▁",
+        "preservative▁"
+      ],
+      "new": "—▁a▁preservative▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "infection▁"
+      ],
+      "new": "used▁in▁infection▁"
+    },
+    {
+      "pair": [
+        "the▁",
+        "nucleobase▁"
+      ],
+      "new": "the▁nucleobase▁"
+    },
+    {
+      "pair": [
+        ",▁a▁nucleobase▁",
+        "containing▁a▁benzene▁ring▁"
+      ],
+      "new": ",▁a▁nucleobase▁containing▁a▁benzene▁ring▁"
+    },
+    {
+      "pair": [
+        ",▁a▁nsaid▁",
+        "containing▁a▁benzene▁ring▁"
+      ],
+      "new": ",▁a▁nsaid▁containing▁a▁benzene▁ring▁"
+    },
+    {
+      "pair": [
+        "analgesic▁",
+        "for▁pain▁relief▁"
+      ],
+      "new": "analgesic▁for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "inflammation▁"
+      ],
+      "new": "used▁in▁inflammation▁"
+    },
+    {
+      "pair": [
+        "—▁a▁nucleobase▁",
+        "used▁in▁biochemistry▁"
+      ],
+      "new": "—▁a▁nucleobase▁used▁in▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "—▁a▁",
+        "sweetener▁"
+      ],
+      "new": "—▁a▁sweetener▁"
+    },
+    {
+      "pair": [
+        ",▁an▁aromatic▁",
+        "nsaid▁"
+      ],
+      "new": ",▁an▁aromatic▁nsaid▁"
+    },
+    {
+      "pair": [
+        "—▁",
+        "nsaid▁"
+      ],
+      "new": "—▁nsaid▁"
+    },
+    {
+      "pair": [
+        "create▁a▁",
+        "nsaid▁"
+      ],
+      "new": "create▁a▁nsaid▁"
+    },
+    {
+      "pair": [
+        "create▁a▁",
+        "nucleobase▁for▁biochemistry▁"
+      ],
+      "new": "create▁a▁nucleobase▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "create▁a▁nucleobase▁for▁biochemistry▁",
+        ",▁specifically▁"
+      ],
+      "new": "create▁a▁nucleobase▁for▁biochemistry▁,▁specifically▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁",
+        "nsaid▁"
+      ],
+      "new": "generate▁a▁nsaid▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁nsaid▁",
+        "with▁the▁structure▁of▁"
+      ],
+      "new": "generate▁a▁nsaid▁with▁the▁structure▁of▁"
+    },
+    {
+      "pair": [
+        ",▁an▁aromatic▁",
+        "nucleobase▁"
+      ],
+      "new": ",▁an▁aromatic▁nucleobase▁"
+    },
+    {
+      "pair": [
+        "produce▁the▁",
+        "nucleobase▁"
+      ],
+      "new": "produce▁the▁nucleobase▁"
+    },
+    {
+      "pair": [
+        "synthesize▁the▁",
+        "nsaid▁"
+      ],
+      "new": "synthesize▁the▁nsaid▁"
+    },
+    {
+      "pair": [
+        "intermediate▁",
+        "for▁biochemistry▁"
+      ],
+      "new": "intermediate▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "acetaminophen▁",
+        ",▁a▁analgesic▁"
+      ],
+      "new": "acetaminophen▁,▁a▁analgesic▁"
+    },
+    {
+      "pair": [
+        "aniline▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "aniline▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "nitrobenzene▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "nitrobenzene▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "xanthine▁",
+        "for▁biochemistry▁"
+      ],
+      "new": "xanthine▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "benzyl▁alcohol▁",
+        "for▁antiseptic▁"
+      ],
+      "new": "benzyl▁alcohol▁for▁antiseptic▁"
+    },
+    {
+      "pair": [
+        "metronidazole▁",
+        ",▁a▁antibiotic▁"
+      ],
+      "new": "metronidazole▁,▁a▁antibiotic▁"
+    },
+    {
+      "pair": [
+        "coumarin▁",
+        ",▁a▁"
+      ],
+      "new": "coumarin▁,▁a▁"
+    },
+    {
+      "pair": [
+        "coumarin▁,▁a▁",
+        "fragrance▁"
+      ],
+      "new": "coumarin▁,▁a▁fragrance▁"
+    },
+    {
+      "pair": [
+        "phenol▁",
+        ",▁a▁"
+      ],
+      "new": "phenol▁,▁a▁"
+    },
+    {
+      "pair": [
+        "phenol▁,▁a▁",
+        "disinfectant▁"
+      ],
+      "new": "phenol▁,▁a▁disinfectant▁"
+    },
+    {
+      "pair": [
+        "cinnamic▁acid▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "cinnamic▁acid▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "caffeine▁",
+        ",▁a▁"
+      ],
+      "new": "caffeine▁,▁a▁"
+    },
+    {
+      "pair": [
+        "caffeine▁,▁a▁",
+        "stimulant▁"
+      ],
+      "new": "caffeine▁,▁a▁stimulant▁"
+    },
+    {
+      "pair": [
+        "aspartame▁",
+        ",▁a▁sweetener▁"
+      ],
+      "new": "aspartame▁,▁a▁sweetener▁"
+    },
+    {
+      "pair": [
+        "isoniazid▁",
+        ",▁a▁antibiotic▁"
+      ],
+      "new": "isoniazid▁,▁a▁antibiotic▁"
+    },
+    {
+      "pair": [
+        "barbituric▁acid▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "barbituric▁acid▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "preservative▁",
+        "benzoic▁acid▁"
+      ],
+      "new": "preservative▁benzoic▁acid▁"
+    },
+    {
+      "pair": [
+        "ibuprofen▁",
+        "for▁inflammation▁"
+      ],
+      "new": "ibuprofen▁for▁inflammation▁"
+    },
+    {
+      "pair": [
+        "hydroquinone▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "hydroquinone▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "benzamide▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "benzamide▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "produce▁the▁",
+        "antibiotic▁"
+      ],
+      "new": "produce▁the▁antibiotic▁"
+    },
+    {
+      "pair": [
+        "vanillin▁",
+        ",▁a▁"
+      ],
+      "new": "vanillin▁,▁a▁"
+    },
+    {
+      "pair": [
+        "vanillin▁,▁a▁",
+        "flavorant▁"
+      ],
+      "new": "vanillin▁,▁a▁flavorant▁"
+    },
+    {
+      "pair": [
+        "fragrance▁",
+        "coumarin▁"
+      ],
+      "new": "fragrance▁coumarin▁"
+    },
+    {
+      "pair": [
+        "furan▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "furan▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "targeting▁",
+        "food▁industry▁"
+      ],
+      "new": "targeting▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "naproxen▁",
+        "for▁inflammation▁"
+      ],
+      "new": "naproxen▁for▁inflammation▁"
+    },
+    {
+      "pair": [
+        "saccharin▁",
+        ",▁a▁sweetener▁"
+      ],
+      "new": "saccharin▁,▁a▁sweetener▁"
+    },
+    {
+      "pair": [
+        "thiophene▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "thiophene▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "adenine▁",
+        "for▁biochemistry▁"
+      ],
+      "new": "adenine▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "ethyl▁benzoate▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "ethyl▁benzoate▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁an▁aromatic▁",
+        "antibiotic▁"
+      ],
+      "new": ",▁an▁aromatic▁antibiotic▁"
+    },
+    {
+      "pair": [
+        ",▁used▁",
+        "for▁food▁industry▁"
+      ],
+      "new": ",▁used▁for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "sulfanilamide▁",
+        ",▁a▁antibiotic▁"
+      ],
+      "new": "sulfanilamide▁,▁a▁antibiotic▁"
+    },
+    {
+      "pair": [
+        "liniment▁",
+        "methyl▁salicylate▁"
+      ],
+      "new": "liniment▁methyl▁salicylate▁"
+    },
+    {
+      "pair": [
+        "caffeine▁",
+        "for▁alertness▁"
+      ],
+      "new": "caffeine▁for▁alertness▁"
+    },
+    {
+      "pair": [
+        "benzaldehyde▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "benzaldehyde▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "styrene▁",
+        ",▁a▁"
+      ],
+      "new": "styrene▁,▁a▁"
+    },
+    {
+      "pair": [
+        "styrene▁,▁a▁",
+        "monomer▁"
+      ],
+      "new": "styrene▁,▁a▁monomer▁"
+    },
+    {
+      "pair": [
+        "phenetole▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "phenetole▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁",
+        "food▁industry▁"
+      ],
+      "new": ",▁used▁as▁food▁industry▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁food▁industry▁",
+        "agent▁"
+      ],
+      "new": ",▁used▁as▁food▁industry▁agent▁"
+    },
+    {
+      "pair": [
+        "disinfectant▁",
+        "phenol▁"
+      ],
+      "new": "disinfectant▁phenol▁"
+    },
+    {
+      "pair": [
+        "synthesize▁the▁",
+        "antibiotic▁"
+      ],
+      "new": "synthesize▁the▁antibiotic▁"
+    },
+    {
+      "pair": [
+        "metronidazole▁",
+        "for▁infection▁"
+      ],
+      "new": "metronidazole▁for▁infection▁"
+    },
+    {
+      "pair": [
+        "salicylic▁acid▁",
+        "for▁acne▁treatment▁"
+      ],
+      "new": "salicylic▁acid▁for▁acne▁treatment▁"
+    },
+    {
+      "pair": [
+        "analgesic▁",
+        "acetaminophen▁"
+      ],
+      "new": "analgesic▁acetaminophen▁"
+    },
+    {
+      "pair": [
+        "vanillin▁",
+        "for▁food▁industry▁"
+      ],
+      "new": "vanillin▁for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "chlorobenzene▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "chlorobenzene▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "monomer▁",
+        "styrene▁"
+      ],
+      "new": "monomer▁styrene▁"
+    },
+    {
+      "pair": [
+        "isonicotinamide▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "isonicotinamide▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "aspirin▁",
+        "for▁pain▁relief▁"
+      ],
+      "new": "aspirin▁for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "cytosine▁",
+        "for▁biochemistry▁"
+      ],
+      "new": "cytosine▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "benzoic▁acid▁",
+        ",▁a▁preservative▁"
+      ],
+      "new": "benzoic▁acid▁,▁a▁preservative▁"
+    },
+    {
+      "pair": [
+        "—▁a▁nsaid▁",
+        "targeting▁"
+      ],
+      "new": "—▁a▁nsaid▁targeting▁"
+    },
+    {
+      "pair": [
+        "sweetener▁",
+        "saccharin▁"
+      ],
+      "new": "sweetener▁saccharin▁"
+    },
+    {
+      "pair": [
+        "benzyl▁alcohol▁",
+        ",▁a▁preservative▁"
+      ],
+      "new": "benzyl▁alcohol▁,▁a▁preservative▁"
+    },
+    {
+      "pair": [
+        "uracil▁",
+        "for▁biochemistry▁"
+      ],
+      "new": "uracil▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁",
+        "antibiotic▁"
+      ],
+      "new": "generate▁a▁antibiotic▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁antibiotic▁",
+        "with▁the▁structure▁of▁"
+      ],
+      "new": "generate▁a▁antibiotic▁with▁the▁structure▁of▁"
+    },
+    {
+      "pair": [
+        "pyrrole▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "pyrrole▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "pyridine▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "pyridine▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "acetanilide▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "acetanilide▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "aniline▁",
+        ",▁a▁"
+      ],
+      "new": "aniline▁,▁a▁"
+    },
+    {
+      "pair": [
+        "aniline▁,▁a▁",
+        "precursor▁"
+      ],
+      "new": "aniline▁,▁a▁precursor▁"
+    },
+    {
+      "pair": [
+        "paracetamol▁",
+        ",▁a▁analgesic▁"
+      ],
+      "new": "paracetamol▁,▁a▁analgesic▁"
+    },
+    {
+      "pair": [
+        "catechol▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "catechol▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "toluene▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "toluene▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "nicotinic▁acid▁",
+        ",▁a▁"
+      ],
+      "new": "nicotinic▁acid▁,▁a▁"
+    },
+    {
+      "pair": [
+        "nicotinic▁acid▁,▁a▁",
+        "vitamin▁"
+      ],
+      "new": "nicotinic▁acid▁,▁a▁vitamin▁"
+    },
+    {
+      "pair": [
+        "bromobenzene▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "bromobenzene▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "sweetener▁",
+        "aspartame▁"
+      ],
+      "new": "sweetener▁aspartame▁"
+    },
+    {
+      "pair": [
+        "resorcinol▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "resorcinol▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "anthranilic▁acid▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "anthranilic▁acid▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "sulfanilamide▁",
+        "for▁infection▁"
+      ],
+      "new": "sulfanilamide▁for▁infection▁"
+    },
+    {
+      "pair": [
+        "anisol▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "anisol▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "indole▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "indole▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "hippuric▁acid▁",
+        "for▁biochemistry▁"
+      ],
+      "new": "hippuric▁acid▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        ",▁a▁compound▁",
+        "for▁food▁industry▁"
+      ],
+      "new": ",▁a▁compound▁for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "analgesic▁",
+        "paracetamol▁"
+      ],
+      "new": "analgesic▁paracetamol▁"
+    },
+    {
+      "pair": [
+        "methyl▁salicylate▁",
+        ",▁a▁"
+      ],
+      "new": "methyl▁salicylate▁,▁a▁"
+    },
+    {
+      "pair": [
+        "methyl▁salicylate▁,▁a▁",
+        "liniment▁"
+      ],
+      "new": "methyl▁salicylate▁,▁a▁liniment▁"
+    },
+    {
+      "pair": [
+        "—▁a▁antibiotic▁",
+        "targeting▁"
+      ],
+      "new": "—▁a▁antibiotic▁targeting▁"
+    },
+    {
+      "pair": [
+        "the▁",
+        "antibiotic▁"
+      ],
+      "new": "the▁antibiotic▁"
+    },
+    {
+      "pair": [
+        "imidazole▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "imidazole▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "nicotinic▁acid▁",
+        "for▁nutrition▁"
+      ],
+      "new": "nicotinic▁acid▁for▁nutrition▁"
+    },
+    {
+      "pair": [
+        "guanine▁",
+        "for▁biochemistry▁"
+      ],
+      "new": "guanine▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "acetophenone▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "acetophenone▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "isoniazid▁",
+        "for▁tuberculosis▁"
+      ],
+      "new": "isoniazid▁for▁tuberculosis▁"
+    },
+    {
+      "pair": [
+        "—▁",
+        "antibiotic▁for▁infection▁"
+      ],
+      "new": "—▁antibiotic▁for▁infection▁"
+    },
+    {
+      "pair": [
+        "nicotinic▁acid▁",
+        "—▁a▁"
+      ],
+      "new": "nicotinic▁acid▁—▁a▁"
+    },
+    {
+      "pair": [
+        "nicotinic▁acid▁—▁a▁",
+        "vitamin▁"
+      ],
+      "new": "nicotinic▁acid▁—▁a▁vitamin▁"
+    },
+    {
+      "pair": [
+        "precursor▁",
+        "aniline▁for▁chemical▁synthesis▁"
+      ],
+      "new": "precursor▁aniline▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁",
+        "analgesic▁"
+      ],
+      "new": "generate▁a▁analgesic▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁analgesic▁",
+        "with▁the▁structure▁of▁"
+      ],
+      "new": "generate▁a▁analgesic▁with▁the▁structure▁of▁"
+    },
+    {
+      "pair": [
+        "create▁a▁",
+        "sweetener▁for▁food▁industry▁"
+      ],
+      "new": "create▁a▁sweetener▁for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "create▁a▁sweetener▁for▁food▁industry▁",
+        ",▁specifically▁"
+      ],
+      "new": "create▁a▁sweetener▁for▁food▁industry▁,▁specifically▁"
+    },
+    {
+      "pair": [
+        "antibiotic▁",
+        "for▁tuberculosis▁"
+      ],
+      "new": "antibiotic▁for▁tuberculosis▁"
+    },
+    {
+      "pair": [
+        "hippuric▁acid▁",
+        "—▁a▁intermediate▁"
+      ],
+      "new": "hippuric▁acid▁—▁a▁intermediate▁"
+    },
+    {
+      "pair": [
+        "generate▁",
+        "paracetamol▁"
+      ],
+      "new": "generate▁paracetamol▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "acne▁treatment▁"
+      ],
+      "new": "used▁in▁acne▁treatment▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁",
+        "inflammation▁"
+      ],
+      "new": ",▁used▁as▁inflammation▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁inflammation▁",
+        "agent▁"
+      ],
+      "new": ",▁used▁as▁inflammation▁agent▁"
+    },
+    {
+      "pair": [
+        "—▁",
+        "preservative▁"
+      ],
+      "new": "—▁preservative▁"
+    },
+    {
+      "pair": [
+        "vitamin▁",
+        "for▁nutrition▁"
+      ],
+      "new": "vitamin▁for▁nutrition▁"
+    },
+    {
+      "pair": [
+        "generate▁",
+        "acetaminophen▁"
+      ],
+      "new": "generate▁acetaminophen▁"
+    },
+    {
+      "pair": [
+        "xanthine▁",
+        "—▁a▁intermediate▁"
+      ],
+      "new": "xanthine▁—▁a▁intermediate▁"
+    },
+    {
+      "pair": [
+        "fragrance▁coumarin▁",
+        "for▁perfumery▁"
+      ],
+      "new": "fragrance▁coumarin▁for▁perfumery▁"
+    },
+    {
+      "pair": [
+        ",▁an▁aromatic▁",
+        "analgesic▁"
+      ],
+      "new": ",▁an▁aromatic▁analgesic▁"
+    },
+    {
+      "pair": [
+        "vanillin▁",
+        "—▁a▁"
+      ],
+      "new": "vanillin▁—▁a▁"
+    },
+    {
+      "pair": [
+        "vanillin▁—▁a▁",
+        "flavorant▁"
+      ],
+      "new": "vanillin▁—▁a▁flavorant▁"
+    },
+    {
+      "pair": [
+        ",▁a▁compound▁",
+        "for▁inflammation▁"
+      ],
+      "new": ",▁a▁compound▁for▁inflammation▁"
+    },
+    {
+      "pair": [
+        "create▁a▁",
+        "antibiotic▁for▁infection▁"
+      ],
+      "new": "create▁a▁antibiotic▁for▁infection▁"
+    },
+    {
+      "pair": [
+        "create▁a▁antibiotic▁for▁infection▁",
+        ",▁specifically▁"
+      ],
+      "new": "create▁a▁antibiotic▁for▁infection▁,▁specifically▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "tuberculosis▁"
+      ],
+      "new": "used▁in▁tuberculosis▁"
+    },
+    {
+      "pair": [
+        "acetaminophen▁",
+        "—▁a▁analgesic▁"
+      ],
+      "new": "acetaminophen▁—▁a▁analgesic▁"
+    },
+    {
+      "pair": [
+        ",▁used▁",
+        "for▁antiseptic▁"
+      ],
+      "new": ",▁used▁for▁antiseptic▁"
+    },
+    {
+      "pair": [
+        "generate▁",
+        "benzoic▁acid▁"
+      ],
+      "new": "generate▁benzoic▁acid▁"
+    },
+    {
+      "pair": [
+        "paracetamol▁",
+        "—▁a▁analgesic▁"
+      ],
+      "new": "paracetamol▁—▁a▁analgesic▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "polymer▁synthesis▁"
+      ],
+      "new": "used▁in▁polymer▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁",
+        "infection▁"
+      ],
+      "new": ",▁used▁as▁infection▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁infection▁",
+        "agent▁"
+      ],
+      "new": ",▁used▁as▁infection▁agent▁"
+    },
+    {
+      "pair": [
+        "disinfectant▁phenol▁",
+        "for▁antiseptic▁"
+      ],
+      "new": "disinfectant▁phenol▁for▁antiseptic▁"
+    },
+    {
+      "pair": [
+        "salicylic▁acid▁",
+        ",▁a▁nsaid▁"
+      ],
+      "new": "salicylic▁acid▁,▁a▁nsaid▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "alertness▁"
+      ],
+      "new": "used▁in▁alertness▁"
+    },
+    {
+      "pair": [
+        "benzyl▁alcohol▁",
+        "—▁a▁preservative▁"
+      ],
+      "new": "benzyl▁alcohol▁—▁a▁preservative▁"
+    },
+    {
+      "pair": [
+        "generate▁",
+        "phenol▁"
+      ],
+      "new": "generate▁phenol▁"
+    },
+    {
+      "pair": [
+        "analgesic▁acetaminophen▁",
+        "for▁pain▁relief▁"
+      ],
+      "new": "analgesic▁acetaminophen▁for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        ",▁used▁",
+        "for▁infection▁"
+      ],
+      "new": ",▁used▁for▁infection▁"
+    },
+    {
+      "pair": [
+        "create▁a▁",
+        "analgesic▁for▁pain▁relief▁"
+      ],
+      "new": "create▁a▁analgesic▁for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "create▁a▁analgesic▁for▁pain▁relief▁",
+        ",▁specifically▁"
+      ],
+      "new": "create▁a▁analgesic▁for▁pain▁relief▁,▁specifically▁"
+    },
+    {
+      "pair": [
+        ",▁a▁compound▁",
+        "for▁infection▁"
+      ],
+      "new": ",▁a▁compound▁for▁infection▁"
+    },
+    {
+      "pair": [
+        "flavorant▁",
+        "vanillin▁for▁food▁industry▁"
+      ],
+      "new": "flavorant▁vanillin▁for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "—▁a▁nsaid▁targeting▁",
+        "inflammation▁"
+      ],
+      "new": "—▁a▁nsaid▁targeting▁inflammation▁"
+    },
+    {
+      "pair": [
+        "—▁a▁nsaid▁",
+        "used▁in▁inflammation▁"
+      ],
+      "new": "—▁a▁nsaid▁used▁in▁inflammation▁"
+    },
+    {
+      "pair": [
+        "phenol▁",
+        "—▁a▁"
+      ],
+      "new": "phenol▁—▁a▁"
+    },
+    {
+      "pair": [
+        "phenol▁—▁a▁",
+        "disinfectant▁"
+      ],
+      "new": "phenol▁—▁a▁disinfectant▁"
+    },
+    {
+      "pair": [
+        "targeting▁",
+        "antiseptic▁"
+      ],
+      "new": "targeting▁antiseptic▁"
+    },
+    {
+      "pair": [
+        "—▁",
+        "analgesic▁for▁pain▁relief▁"
+      ],
+      "new": "—▁analgesic▁for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "benzoic▁acid▁",
+        "—▁a▁preservative▁"
+      ],
+      "new": "benzoic▁acid▁—▁a▁preservative▁"
+    },
+    {
+      "pair": [
+        "methyl▁salicylate▁",
+        "—▁a▁"
+      ],
+      "new": "methyl▁salicylate▁—▁a▁"
+    },
+    {
+      "pair": [
+        "methyl▁salicylate▁—▁a▁",
+        "liniment▁"
+      ],
+      "new": "methyl▁salicylate▁—▁a▁liniment▁"
+    },
+    {
+      "pair": [
+        "saccharin▁",
+        "—▁a▁sweetener▁"
+      ],
+      "new": "saccharin▁—▁a▁sweetener▁"
+    },
+    {
+      "pair": [
+        "generate▁",
+        "aspartame▁"
+      ],
+      "new": "generate▁aspartame▁"
+    },
+    {
+      "pair": [
+        "styrene▁",
+        "—▁a▁"
+      ],
+      "new": "styrene▁—▁a▁"
+    },
+    {
+      "pair": [
+        "styrene▁—▁a▁",
+        "monomer▁"
+      ],
+      "new": "styrene▁—▁a▁monomer▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁",
+        "preservative▁"
+      ],
+      "new": "generate▁a▁preservative▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁preservative▁",
+        "with▁the▁structure▁of▁"
+      ],
+      "new": "generate▁a▁preservative▁with▁the▁structure▁of▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁",
+        "sweetener▁"
+      ],
+      "new": "generate▁a▁sweetener▁"
+    },
+    {
+      "pair": [
+        "generate▁a▁sweetener▁",
+        "with▁the▁structure▁of▁"
+      ],
+      "new": "generate▁a▁sweetener▁with▁the▁structure▁of▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "nutrition▁"
+      ],
+      "new": "used▁in▁nutrition▁"
+    },
+    {
+      "pair": [
+        "sweetener▁saccharin▁",
+        "for▁food▁industry▁"
+      ],
+      "new": "sweetener▁saccharin▁for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "—▁nsaid▁",
+        "for▁inflammation▁"
+      ],
+      "new": "—▁nsaid▁for▁inflammation▁"
+    },
+    {
+      "pair": [
+        "liniment▁methyl▁salicylate▁",
+        "for▁pain▁relief▁"
+      ],
+      "new": "liniment▁methyl▁salicylate▁for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "sweetener▁aspartame▁",
+        "for▁food▁industry▁"
+      ],
+      "new": "sweetener▁aspartame▁for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "flavorant▁",
+        "for▁food▁industry▁"
+      ],
+      "new": "flavorant▁for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        ",▁used▁",
+        "for▁inflammation▁"
+      ],
+      "new": ",▁used▁for▁inflammation▁"
+    },
+    {
+      "pair": [
+        "disinfectant▁",
+        "for▁antiseptic▁"
+      ],
+      "new": "disinfectant▁for▁antiseptic▁"
+    },
+    {
+      "pair": [
+        "coumarin▁",
+        "—▁a▁"
+      ],
+      "new": "coumarin▁—▁a▁"
+    },
+    {
+      "pair": [
+        "coumarin▁—▁a▁",
+        "fragrance▁"
+      ],
+      "new": "coumarin▁—▁a▁fragrance▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "perfumery▁"
+      ],
+      "new": "used▁in▁perfumery▁"
+    },
+    {
+      "pair": [
+        "aspirin▁",
+        "—▁a▁nsaid▁"
+      ],
+      "new": "aspirin▁—▁a▁nsaid▁"
+    },
+    {
+      "pair": [
+        "hippuric▁acid▁",
+        ",▁a▁intermediate▁"
+      ],
+      "new": "hippuric▁acid▁,▁a▁intermediate▁"
+    },
+    {
+      "pair": [
+        "—▁",
+        "sweetener▁for▁food▁industry▁"
+      ],
+      "new": "—▁sweetener▁for▁food▁industry▁"
+    },
+    {
+      "pair": [
+        "ibuprofen▁",
+        ",▁a▁nsaid▁"
+      ],
+      "new": "ibuprofen▁,▁a▁nsaid▁"
+    },
+    {
+      "pair": [
+        "stimulant▁",
+        "for▁alertness▁"
+      ],
+      "new": "stimulant▁for▁alertness▁"
+    },
+    {
+      "pair": [
+        "fragrance▁",
+        "for▁perfumery▁"
+      ],
+      "new": "fragrance▁for▁perfumery▁"
+    },
+    {
+      "pair": [
+        "generate▁",
+        "saccharin▁"
+      ],
+      "new": "generate▁saccharin▁"
+    },
+    {
+      "pair": [
+        "preservative▁benzoic▁acid▁",
+        "for▁antifungal▁"
+      ],
+      "new": "preservative▁benzoic▁acid▁for▁antifungal▁"
+    },
+    {
+      "pair": [
+        "stimulant▁",
+        "caffeine▁for▁alertness▁"
+      ],
+      "new": "stimulant▁caffeine▁for▁alertness▁"
+    },
+    {
+      "pair": [
+        "caffeine▁",
+        "—▁a▁"
+      ],
+      "new": "caffeine▁—▁a▁"
+    },
+    {
+      "pair": [
+        "caffeine▁—▁a▁",
+        "stimulant▁"
+      ],
+      "new": "caffeine▁—▁a▁stimulant▁"
+    },
+    {
+      "pair": [
+        "analgesic▁paracetamol▁",
+        "for▁pain▁relief▁"
+      ],
+      "new": "analgesic▁paracetamol▁for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "used▁in▁",
+        "antifungal▁"
+      ],
+      "new": "used▁in▁antifungal▁"
+    },
+    {
+      "pair": [
+        "generate▁",
+        "methyl▁salicylate▁"
+      ],
+      "new": "generate▁methyl▁salicylate▁"
+    },
+    {
+      "pair": [
+        "—▁a▁antibiotic▁targeting▁",
+        "infection▁"
+      ],
+      "new": "—▁a▁antibiotic▁targeting▁infection▁"
+    },
+    {
+      "pair": [
+        "monomer▁styrene▁",
+        "for▁polymer▁synthesis▁"
+      ],
+      "new": "monomer▁styrene▁for▁polymer▁synthesis▁"
+    },
+    {
+      "pair": [
+        "xanthine▁",
+        ",▁a▁intermediate▁"
+      ],
+      "new": "xanthine▁,▁a▁intermediate▁"
+    },
+    {
+      "pair": [
+        "aspirin▁",
+        ",▁a▁nsaid▁"
+      ],
+      "new": "aspirin▁,▁a▁nsaid▁"
+    },
+    {
+      "pair": [
+        "aspartame▁",
+        "—▁a▁sweetener▁"
+      ],
+      "new": "aspartame▁—▁a▁sweetener▁"
+    },
+    {
+      "pair": [
+        "generate▁",
+        "styrene▁"
+      ],
+      "new": "generate▁styrene▁"
+    },
+    {
+      "pair": [
+        "vitamin▁",
+        "nicotinic▁acid▁for▁nutrition▁"
+      ],
+      "new": "vitamin▁nicotinic▁acid▁for▁nutrition▁"
+    },
+    {
+      "pair": [
+        "precursor▁",
+        "for▁chemical▁synthesis▁"
+      ],
+      "new": "precursor▁for▁chemical▁synthesis▁"
+    },
+    {
+      "pair": [
+        "monomer▁",
+        "for▁polymer▁synthesis▁"
+      ],
+      "new": "monomer▁for▁polymer▁synthesis▁"
+    },
+    {
+      "pair": [
+        ",▁a▁compound▁",
+        "for▁antiseptic▁"
+      ],
+      "new": ",▁a▁compound▁for▁antiseptic▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁",
+        "antiseptic▁"
+      ],
+      "new": ",▁used▁as▁antiseptic▁"
+    },
+    {
+      "pair": [
+        ",▁used▁as▁antiseptic▁",
+        "agent▁"
+      ],
+      "new": ",▁used▁as▁antiseptic▁agent▁"
+    },
+    {
+      "pair": [
+        ",▁an▁aromatic▁",
+        "sweetener▁"
+      ],
+      "new": ",▁an▁aromatic▁sweetener▁"
+    },
+    {
+      "pair": [
+        "liniment▁",
+        "for▁pain▁relief▁"
+      ],
+      "new": "liniment▁for▁pain▁relief▁"
+    },
+    {
+      "pair": [
+        "generate▁",
+        "coumarin▁"
+      ],
+      "new": "generate▁coumarin▁"
+    },
+    {
+      "pair": [
+        "—▁",
+        "intermediate▁for▁biochemistry▁"
+      ],
+      "new": "—▁intermediate▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "aniline▁",
+        "—▁a▁"
+      ],
+      "new": "aniline▁—▁a▁"
+    },
+    {
+      "pair": [
+        "aniline▁—▁a▁",
+        "precursor▁"
+      ],
+      "new": "aniline▁—▁a▁precursor▁"
+    },
+    {
+      "pair": [
+        "create▁a▁",
+        "preservative▁"
+      ],
+      "new": "create▁a▁preservative▁"
+    },
+    {
+      "pair": [
+        ",▁an▁aromatic▁",
+        "preservative▁"
+      ],
+      "new": ",▁an▁aromatic▁preservative▁"
+    },
+    {
+      "pair": [
+        "create▁a▁nsaid▁",
+        "for▁inflammation▁"
+      ],
+      "new": "create▁a▁nsaid▁for▁inflammation▁"
+    },
+    {
+      "pair": [
+        "create▁a▁nsaid▁for▁inflammation▁",
+        ",▁specifically▁"
+      ],
+      "new": "create▁a▁nsaid▁for▁inflammation▁,▁specifically▁"
+    },
+    {
+      "pair": [
+        "naproxen▁",
+        ",▁a▁nsaid▁"
+      ],
+      "new": "naproxen▁,▁a▁nsaid▁"
+    },
+    {
+      "pair": [
+        "create▁a▁",
+        "intermediate▁for▁biochemistry▁"
+      ],
+      "new": "create▁a▁intermediate▁for▁biochemistry▁"
+    },
+    {
+      "pair": [
+        "create▁a▁intermediate▁for▁biochemistry▁",
+        ",▁specifically▁"
+      ],
+      "new": "create▁a▁intermediate▁for▁biochemistry▁,▁specifically▁"
+    },
+    {
+      "pair": [
+        "preservative▁",
+        "benzyl▁alcohol▁for▁antiseptic▁"
+      ],
+      "new": "preservative▁benzyl▁alcohol▁for▁antiseptic▁"
+    },
+    {
+      "pair": [
+        "—▁a▁antibiotic▁",
+        "used▁in▁infection▁"
+      ],
+      "new": "—▁a▁antibiotic▁used▁in▁infection▁"
+    }
+  ]
+}
