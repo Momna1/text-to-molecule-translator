@@ -62,7 +62,6 @@ def load_generator() -> Optional[MoleculeGenerator]:
     locally and in the Streamlit Cloud environment (where the working
     directory may differ from the script's directory).
     """
-    # Absolute path to the directory containing this script
     script_dir = os.path.dirname(os.path.abspath(__file__))
     ckpt_dir = os.path.join(script_dir, "ckpt")
 
@@ -227,17 +226,24 @@ if "last_result" in st.session_state:
             st.markdown("**2D structure:**")
             try:
                 from rdkit import Chem
-                from rdkit.Chem import Draw
+                from rdkit.Chem.Draw import rdMolDraw2D
+                from rdkit.Chem import AllChem
                 mol = Chem.MolFromSmiles(result.canonical_smiles)
                 if mol is not None:
-                    img = Draw.MolToImage(mol, size=(400, 400))
-                    st.image(img, caption=result.canonical_smiles, use_container_width=True)
+                    AllChem.Compute2DCoords(mol)
+                    # Use rdMolDraw2D with Cairo backend — no X11/libXrender needed
+                    drawer = rdMolDraw2D.MolDraw2DCairo(400, 400)
+                    drawer.DrawMolecule(mol)
+                    drawer.FinishDrawing()
+                    png_bytes = drawer.GetDrawingText()
+                    st.image(png_bytes, caption=result.canonical_smiles, use_container_width=True)
 
-                    # Save to file (use absolute path for cloud compatibility)
+                    # Also save to file (use absolute path for cloud compatibility)
                     script_dir = os.path.dirname(os.path.abspath(__file__))
                     results_dir = os.path.join(script_dir, "results")
                     os.makedirs(results_dir, exist_ok=True)
-                    img.save(os.path.join(results_dir, "generated_molecule.png"))
+                    with open(os.path.join(results_dir, "generated_molecule.png"), "wb") as f:
+                        f.write(png_bytes)
             except Exception as e:
                 st.warning(f"Could not render 2D structure: {e}")
 
